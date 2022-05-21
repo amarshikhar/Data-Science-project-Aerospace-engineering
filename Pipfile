@@ -13,6 +13,7 @@ cassandra-driver = "*"
 flask = "*"
 flask-cors = "*"
 flask-monitoringdashboard = "*"
+gunicorn = "*"
 
 [dev-packages]
 
