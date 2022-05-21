@@ -20,6 +20,7 @@ CORS(app)
 @app.route("/", methods=['GET'])
 @cross_origin()
 def home():
+    print(os.listdir())
     return render_template('index.html')
 
 @app.route("/predict", methods=['POST'])
@@ -96,5 +97,5 @@ if __name__ == "__main__":
     ## port = 5000
     # app.run(debug=True)
     httpd = simple_server.make_server(host, port, app)
-    print("Serving on %s %d" % (host, port))
+    # print("Serving on %s %d" % (host, port))
     httpd.serve_forever()
