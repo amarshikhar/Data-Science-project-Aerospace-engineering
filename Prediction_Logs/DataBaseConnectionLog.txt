@@ -1,0 +1,5 @@
+2022-05-18/20:58:17		Trying to connect to database predictdb
+2022-05-18/20:58:17		Successfully loaded connection config file.
+2022-05-18/20:58:17		Successfully loaded token for connection.
+2022-05-18/20:58:17		Attemption to open database predictdb.
+2022-05-18/20:58:18		Opened predictdb database successfully

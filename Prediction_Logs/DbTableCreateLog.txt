@@ -1,0 +1,18 @@
+2022-05-18/20:58:17		Initialise table creation
+2022-05-18/20:58:17		Connecting to database.
+2022-05-18/20:58:18		Connection established
+2022-05-18/20:58:18		Checking if tables exit, if so drop the existing tables.
+2022-05-18/20:58:18		Successfully dropped old tables.
+2022-05-18/20:58:19		Old meta data table also dropped
+2022-05-18/20:58:19		Creating new tables
+2022-05-18/20:58:19		Creating new table goodrawdata_004
+2022-05-18/20:58:19		Created goodrawdata_004 successfully.
+2022-05-18/20:58:19		Creating new table goodrawdata_003
+2022-05-18/20:58:20		Created goodrawdata_003 successfully.
+2022-05-18/20:58:20		Creating new table goodrawdata_002
+2022-05-18/20:58:21		Created goodrawdata_002 successfully.
+2022-05-18/20:58:21		Creating new table goodrawdata_001
+2022-05-18/20:58:22		Created goodrawdata_001 successfully.
+2022-05-18/20:58:22		Created new tables.
+2022-05-18/20:58:22		Creating meta data table training_meta_data.
+2022-05-18/20:58:23		Meta data table created.

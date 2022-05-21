@@ -1,0 +1,30 @@
+2022-05-18/20:58:17		Starting data insertion into database
+2022-05-18/20:58:17		Connecting to database and waiting for  table creation.
+2022-05-18/20:58:23		Verifying existence of meta data table.
+2022-05-18/20:58:23		Required metadata table exists.
+2022-05-18/20:58:23		Uploading files.
+2022-05-18/20:58:23		Trying to upload file test_FD003.txt.
+2022-05-18/20:58:23		Uploading test_FD003.txt to goodrawdata_003 table.
+2022-05-18/20:58:23		Checking table name goodrawdata_003 in database.
+2022-05-18/20:58:37		Finished uploading test_FD003.txt 16596 queries with a concurrency level of 5000 in 13 seconds.
+2022-05-18/20:58:37		Uploading meta data for table goodrawdata_003.
+2022-05-18/20:58:37		Uploaded table metadata.
+2022-05-18/20:58:37		Trying to upload file test_FD002.txt.
+2022-05-18/20:58:37		Uploading test_FD002.txt to goodrawdata_002 table.
+2022-05-18/20:58:37		Checking table name goodrawdata_002 in database.
+2022-05-18/20:58:59		Finished uploading test_FD002.txt 33991 queries with a concurrency level of 5000 in 21 seconds.
+2022-05-18/20:58:59		Uploading meta data for table goodrawdata_002.
+2022-05-18/20:58:59		Uploaded table metadata.
+2022-05-18/20:58:59		Trying to upload file test_FD001.txt.
+2022-05-18/20:58:59		Uploading test_FD001.txt to goodrawdata_001 table.
+2022-05-18/20:58:59		Checking table name goodrawdata_001 in database.
+2022-05-18/20:59:08		Finished uploading test_FD001.txt 13096 queries with a concurrency level of 5000 in 8 seconds.
+2022-05-18/20:59:08		Uploading meta data for table goodrawdata_001.
+2022-05-18/20:59:08		Uploaded table metadata.
+2022-05-18/20:59:08		Trying to upload file test_FD004.txt.
+2022-05-18/20:59:08		Uploading test_FD004.txt to goodrawdata_004 table.
+2022-05-18/20:59:08		Checking table name goodrawdata_004 in database.
+2022-05-18/20:59:34		Finished uploading test_FD004.txt 41214 queries with a concurrency level of 5000 in 25 seconds.
+2022-05-18/20:59:34		Uploading meta data for table goodrawdata_004.
+2022-05-18/20:59:34		Uploaded table metadata.
+2022-05-18/20:59:34		All files are inserted successfully.

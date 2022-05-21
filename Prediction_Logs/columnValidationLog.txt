@@ -1,0 +1,6 @@
+2022-05-18/20:58:15		Column Length Validation Started!!
+2022-05-18/20:58:15		Column Length for the file validated :: test_FD003.txt
+2022-05-18/20:58:16		Column Length for the file validated :: test_FD002.txt
+2022-05-18/20:58:16		Column Length for the file validated :: test_FD001.txt
+2022-05-18/20:58:16		Column Length for the file validated :: test_FD004.txt
+2022-05-18/20:58:16		Column Length Validation Completed!!

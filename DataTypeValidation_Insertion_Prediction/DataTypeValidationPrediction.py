@@ -172,7 +172,7 @@ class dBOperation:
                 del future1
 
             # check for metadata table
-            del_meta = f'DROP TABLE IF EXISTS {DatabaseName}.training_meta_data'
+            del_meta = f'DROP TABLE IF EXISTS {DatabaseName}.prediction_meta_data'
             del_meta = SimpleStatement(del_meta)
             del_meta.is_idempotent = True
             conn.execute(del_meta)
@@ -212,7 +212,7 @@ class dBOperation:
                 self.logger.log(log_file, "Created new tables.")
 
             # create meta table as well, meta table contains data about the tables
-            stmt = f"CREATE TABLE {DatabaseName}.training_meta_data " + \
+            stmt = f"CREATE TABLE {DatabaseName}.prediction_meta_data " + \
                    "(table_name VARCHAR, unit_nr_range INT, total_rows INT, PRIMARY KEY (table_name))"
             query = SimpleStatement(stmt)
             self.logger.log(log_file, "Creating meta data table training_meta_data.")
@@ -247,7 +247,7 @@ class dBOperation:
                 raise unavailable
 
         except Exception as e:
-            log_file = open("Prediction_Logs/DbTableCreateLog.txt", 'a+')
+            # log_file = open("Prediction_Logs/DbTableCreateLog.txt", 'a+')
             if conn is not None:
                 conn.shutdown()
             self.logger.log(log_file, f"Error: {e}")
@@ -498,7 +498,7 @@ class dBOperation:
 
             tables_exist = set()
             for result in tables:
-                name = getattr(result, 'table_name')
+                name = getattr(result, 'table_name') # result.table_name
                 if name in table_name_list:
                     tables_exist.add(name)
                     self.logger.log(log_file, f"Found relevant table {name}.")
@@ -558,7 +558,7 @@ class dBOperation:
                 file_name = 'test_input_' + name.split('_')[1] + '.csv'
                 self.logger.log(log_file, f"Writing table {name} to {file_name}")
 
-                # find the corresponding training data file
+                # find the corresponding prediction data file
 
                 conc_level = 1000
 

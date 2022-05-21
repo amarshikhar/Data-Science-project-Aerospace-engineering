@@ -1,0 +1,2 @@
+2022-05-18/20:58:15		Loading schema from schema_prediction.json.
+2022-05-18/20:58:15		Prediction file schema values loaded.	sample file name: train_FD001	Number of columns: 26

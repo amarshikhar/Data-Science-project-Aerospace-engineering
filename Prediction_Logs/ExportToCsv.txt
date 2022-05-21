@@ -1,0 +1,35 @@
+2022-05-18/20:58:17		Staring to import csv from database.
+2022-05-18/20:58:17		Connecting to database...
+2022-05-18/20:58:17		Flush is True, flush old tables and initiate database insertion.
+2022-05-18/20:59:34		Database insertion completed.
+2022-05-18/20:59:34		Connection established to database. Now begin reading tables.
+2022-05-18/20:59:34		Finding existing tables in database.
+2022-05-18/20:59:34		Found relevant table goodrawdata_001.
+2022-05-18/20:59:34		Found relevant table goodrawdata_002.
+2022-05-18/20:59:34		Found relevant table goodrawdata_003.
+2022-05-18/20:59:34		Found relevant table goodrawdata_004.
+2022-05-18/20:59:34		Trying to create output directory for csv files if not exists.
+2022-05-18/20:59:34		Trying to empty existing output directory.
+2022-05-18/20:59:34		Output directory configured successfully!
+2022-05-18/20:59:34		Writing all relevant tables to csv files.
+2022-05-18/20:59:34		Loading metadata for table goodrawdata_004.
+2022-05-18/20:59:34		Metadata loaded.
+2022-05-18/20:59:34		Writing table goodrawdata_004 to test_input_004.csv
+2022-05-18/20:59:51		Verifying against meta data.
+2022-05-18/20:59:55		Finished writing goodrawdata_004 to test_input_004.csv in 20 seconds.
+2022-05-18/20:59:55		Loading metadata for table goodrawdata_003.
+2022-05-18/20:59:55		Metadata loaded.
+2022-05-18/20:59:55		Writing table goodrawdata_003 to test_input_003.csv
+2022-05-18/20:59:59		Verifying against meta data.
+2022-05-18/21:00:01		Finished writing goodrawdata_003 to test_input_003.csv in 5 seconds.
+2022-05-18/21:00:01		Loading metadata for table goodrawdata_002.
+2022-05-18/21:00:01		Metadata loaded.
+2022-05-18/21:00:01		Writing table goodrawdata_002 to test_input_002.csv
+2022-05-18/21:00:16		Verifying against meta data.
+2022-05-18/21:00:20		Finished writing goodrawdata_002 to test_input_002.csv in 19 seconds.
+2022-05-18/21:00:20		Loading metadata for table goodrawdata_001.
+2022-05-18/21:00:20		Metadata loaded.
+2022-05-18/21:00:20		Writing table goodrawdata_001 to test_input_001.csv
+2022-05-18/21:00:23		Verifying against meta data.
+2022-05-18/21:00:24		Finished writing goodrawdata_001 to test_input_001.csv in 4 seconds.
+2022-05-18/21:00:24		Successfully wrote all tables to csv files.

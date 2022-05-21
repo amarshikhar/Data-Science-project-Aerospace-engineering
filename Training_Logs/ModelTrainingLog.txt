@@ -1,478 +1,657 @@
-2022-05-18/01:12:29		Created an instance of <class 'trainingModel.trainModel'> class.
-2022-05-18/01:12:32		Start of Training
-2022-05-18/01:12:32		Start data ingestion.
-2022-05-18/01:12:32		Entered the get_data method of the Data_Getter class
-2022-05-18/01:12:32		Checking all valid files in Training_FileFromDB/.
-2022-05-18/01:12:32		Generating dataframe generator object for files.
-2022-05-18/01:12:32		Data Load Successful.Exited the get_data method of the Data_Getter class
-2022-05-18/01:12:32		Data ingestion completed.
-2022-05-18/01:12:32		Loaded data from train_input_001.
-2022-05-18/01:12:32		Initialize Preprocessor class.
-2022-05-18/01:12:32		Dropping redundant setting columns.
-2022-05-18/01:12:32		Entered the get_redundant_settings method of the Preprocessor class
-2022-05-18/01:12:32		Found 1 setting(s).
-2022-05-18/01:12:32		Dropping settings columns.
-2022-05-18/01:12:32		Entered the remove_columns method of the Preprocessor class
-2022-05-18/01:12:32		Column removal Successful. Exiting remove_columns method.
-2022-05-18/01:12:32		Dropping sensor columns acc to data visualisation/eda.
-2022-05-18/01:12:32		Starting drop_sensor method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:12:32		Dropping columns with zero standard deviation.
-2022-05-18/01:12:32		Entered the drop_columns_with_zero_std_deviation method of the Preprocessor class
-2022-05-18/01:12:32		No columns need to be dropped.
-2022-05-18/01:12:32		Checking data for null values.
-2022-05-18/01:12:32		Entered the is_null_present method of the Preprocessor class
-2022-05-18/01:12:32		Exiting the is_null_present method of the Preprocessor class
-2022-05-18/01:12:32		No columns with null values found in data.
-2022-05-18/01:12:32		Adding remaining useful life column to data.
-2022-05-18/01:12:32		Starting add_remaining_useful_life method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:12:32		Successfully added remaining useful life column to data.
-2022-05-18/01:12:32		Initialise data clustering.
-2022-05-18/01:12:32		Entered the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
-2022-05-18/01:12:32		Plotting elbow plot to identify number of clusters.
-2022-05-18/01:12:38		Saving elbow plot to preprocessing data directory.
-2022-05-18/01:12:39		Saved plot successfully.
-2022-05-18/01:12:39		The optimum number of clusters is:3
-2022-05-18/01:12:39		Exited the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
-2022-05-18/01:12:39		Entered the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
-2022-05-18/01:12:39		Creating optimum number of clusters from data.
-2022-05-18/01:12:39		Saving the KMeans cluster model.
-2022-05-18/01:12:39		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:12:39		Removing old model directory and creating fresh directory.
-2022-05-18/01:12:39		Trying to save model KMeans
-2022-05-18/01:12:39		Model saved successfully!
-2022-05-18/01:12:39		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:12:39		Save complete. Writing cluster number to data.
-2022-05-18/01:12:39		Succesfully created 3 clusters.
-2022-05-18/01:12:39		Exited the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
-2022-05-18/01:12:39		Dividing data into seperate clusters for training.
-2022-05-18/01:12:39		Scaling cluster data for cluster 1
-2022-05-18/01:12:39		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:12:39		Finding all numeric datatype columns.
-2022-05-18/01:12:39		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:12:39		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:12:39		Finding all numeric datatype columns.
-2022-05-18/01:12:39		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:12:39		Initialize model tuning for cluster 1
-2022-05-18/01:12:39		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:12:39		Starting training for XGBoost regressor.
-2022-05-18/01:12:39		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:12:39		Getting best parameter for model with Randomized search.
-2022-05-18/01:13:00		RandomizedSearchCV search for parameters complete.
-2022-05-18/01:13:00		Training XGBoost regressor with best parameters.
-2022-05-18/01:13:00		Training complete!
-2022-05-18/01:13:00		XGBoost best params: {'n_estimators': 100, 'min_samples_split': 50, 'min_samples_leaf': 50, 'max_depth': 4, 'learning_rate': 0.5}
-2022-05-18/01:13:00		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:13:00		Starting training for Random Forest regressor.
-2022-05-18/01:13:00		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:13:00		Getting best parameter for model with Randomized search.
-2022-05-18/01:13:50		Estimated required paramters.
-2022-05-18/01:13:50		Training random forest regressor with best parameters.
-2022-05-18/01:13:51		Training complete!
-2022-05-18/01:13:51		Random Forest best params: {'n_estimators': 50, 'min_samples_split': 60, 'min_samples_leaf': 30, 'max_depth': 10}
-2022-05-18/01:13:51		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:13:51		Evaluating XGBoost prediction and calculating score.
-2022-05-18/01:13:51		RMSE for XGBoost:6.395722430995922
-2022-05-18/01:13:51		R2 score for XGBoost:0.734928867970409
-2022-05-18/01:13:51		Evaluating Random forest prediction and calculating score.
-2022-05-18/01:13:51		RMSE for RF: 10.117899932604583
-2022-05-18/01:13:51		R2 score for RF: 0.3366175504956047
-2022-05-18/01:13:51		Based on scores XGBoost model is selected!
-2022-05-18/01:13:51		Model XGBoost selected for cluster 1. Saving model.
-2022-05-18/01:13:51		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:13:51		Removing old model directory and creating fresh directory.
-2022-05-18/01:13:51		Trying to save model XGBoost1
-2022-05-18/01:13:51		Model saved successfully!
-2022-05-18/01:13:51		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:13:51		Training complete for Cluster 1
-2022-05-18/01:13:51		Scaling cluster data for cluster 2
-2022-05-18/01:13:51		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:13:51		Finding all numeric datatype columns.
-2022-05-18/01:13:51		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:13:51		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:13:51		Finding all numeric datatype columns.
-2022-05-18/01:13:51		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:13:51		Initialize model tuning for cluster 2
-2022-05-18/01:13:51		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:13:51		Starting training for XGBoost regressor.
-2022-05-18/01:13:51		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:13:51		Getting best parameter for model with Randomized search.
-2022-05-18/01:14:24		RandomizedSearchCV search for parameters complete.
-2022-05-18/01:14:24		Training XGBoost regressor with best parameters.
-2022-05-18/01:14:26		Training complete!
-2022-05-18/01:14:26		XGBoost best params: {'n_estimators': 80, 'min_samples_split': 100, 'min_samples_leaf': 30, 'max_depth': 8, 'learning_rate': 0.1}
-2022-05-18/01:14:26		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:14:26		Starting training for Random Forest regressor.
-2022-05-18/01:14:26		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:14:26		Getting best parameter for model with Randomized search.
-2022-05-18/01:15:14		Estimated required paramters.
-2022-05-18/01:15:14		Training random forest regressor with best parameters.
-2022-05-18/01:15:14		Training complete!
-2022-05-18/01:15:14		Random Forest best params: {'n_estimators': 10, 'min_samples_split': 70, 'min_samples_leaf': 30, 'max_depth': 12}
-2022-05-18/01:15:14		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:15:14		Evaluating XGBoost prediction and calculating score.
-2022-05-18/01:15:14		RMSE for XGBoost:11.432529852721283
-2022-05-18/01:15:14		R2 score for XGBoost:0.9019562340539035
-2022-05-18/01:15:14		Evaluating Random forest prediction and calculating score.
-2022-05-18/01:15:14		RMSE for RF: 19.619377063325196
-2022-05-18/01:15:14		R2 score for RF: 0.7112608163723102
-2022-05-18/01:15:14		Based on scores XGBoost model is selected!
-2022-05-18/01:15:14		Model XGBoost selected for cluster 2. Saving model.
-2022-05-18/01:15:14		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:15:14		Removing old model directory and creating fresh directory.
-2022-05-18/01:15:14		Trying to save model XGBoost2
-2022-05-18/01:15:14		Model saved successfully!
-2022-05-18/01:15:14		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:15:14		Training complete for Cluster 2
-2022-05-18/01:15:14		Scaling cluster data for cluster 0
-2022-05-18/01:15:14		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:15:14		Finding all numeric datatype columns.
-2022-05-18/01:15:14		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:15:14		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:15:14		Finding all numeric datatype columns.
-2022-05-18/01:15:14		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:15:14		Initialize model tuning for cluster 0
-2022-05-18/01:15:14		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:15:14		Starting training for XGBoost regressor.
-2022-05-18/01:15:14		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:15:14		Getting best parameter for model with Randomized search.
-2022-05-18/01:15:29		RandomizedSearchCV search for parameters complete.
-2022-05-18/01:15:29		Training XGBoost regressor with best parameters.
-2022-05-18/01:15:30		Training complete!
-2022-05-18/01:15:30		XGBoost best params: {'n_estimators': 100, 'min_samples_split': 150, 'min_samples_leaf': 20, 'max_depth': 6, 'learning_rate': 0.1}
-2022-05-18/01:15:30		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:15:30		Starting training for Random Forest regressor.
-2022-05-18/01:15:30		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:15:30		Getting best parameter for model with Randomized search.
-2022-05-18/01:15:42		Estimated required paramters.
-2022-05-18/01:15:42		Training random forest regressor with best parameters.
-2022-05-18/01:15:43		Training complete!
-2022-05-18/01:15:43		Random Forest best params: {'n_estimators': 10, 'min_samples_split': 70, 'min_samples_leaf': 30, 'max_depth': 6}
-2022-05-18/01:15:43		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:15:43		Evaluating XGBoost prediction and calculating score.
-2022-05-18/01:15:43		RMSE for XGBoost:8.20055773245999
-2022-05-18/01:15:43		R2 score for XGBoost:0.9437672711715236
-2022-05-18/01:15:43		Evaluating Random forest prediction and calculating score.
-2022-05-18/01:15:43		RMSE for RF: 13.237407887114244
-2022-05-18/01:15:43		R2 score for RF: 0.8534761638215875
-2022-05-18/01:15:43		Based on scores XGBoost model is selected!
-2022-05-18/01:15:43		Model XGBoost selected for cluster 0. Saving model.
-2022-05-18/01:15:43		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:15:43		Removing old model directory and creating fresh directory.
-2022-05-18/01:15:43		Trying to save model XGBoost0
-2022-05-18/01:15:43		Model saved successfully!
-2022-05-18/01:15:43		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:15:43		Training complete for Cluster 0
-2022-05-18/01:15:43		Training finished for the data train_input_001
-2022-05-18/01:15:43		Loaded data from train_input_003.
-2022-05-18/01:15:43		Initialize Preprocessor class.
-2022-05-18/01:15:43		Dropping redundant setting columns.
-2022-05-18/01:15:43		Entered the get_redundant_settings method of the Preprocessor class
-2022-05-18/01:15:43		Found 1 setting(s).
-2022-05-18/01:15:43		Dropping settings columns.
-2022-05-18/01:15:43		Entered the remove_columns method of the Preprocessor class
-2022-05-18/01:15:43		Column removal Successful. Exiting remove_columns method.
-2022-05-18/01:15:43		Dropping sensor columns acc to data visualisation/eda.
-2022-05-18/01:15:43		Starting drop_sensor method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:15:43		Dropping columns with zero standard deviation.
-2022-05-18/01:15:43		Entered the drop_columns_with_zero_std_deviation method of the Preprocessor class
-2022-05-18/01:15:43		No columns need to be dropped.
-2022-05-18/01:15:43		Checking data for null values.
-2022-05-18/01:15:43		Entered the is_null_present method of the Preprocessor class
-2022-05-18/01:15:43		Exiting the is_null_present method of the Preprocessor class
-2022-05-18/01:15:43		No columns with null values found in data.
-2022-05-18/01:15:43		Adding remaining useful life column to data.
-2022-05-18/01:15:43		Starting add_remaining_useful_life method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:15:43		Successfully added remaining useful life column to data.
-2022-05-18/01:15:43		Initialise data clustering.
-2022-05-18/01:15:43		Entered the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
-2022-05-18/01:15:43		Plotting elbow plot to identify number of clusters.
-2022-05-18/01:15:51		Saving elbow plot to preprocessing data directory.
-2022-05-18/01:15:51		Saved plot successfully.
-2022-05-18/01:15:51		The optimum number of clusters is:3
-2022-05-18/01:15:51		Exited the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
-2022-05-18/01:15:51		Entered the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
-2022-05-18/01:15:51		Creating optimum number of clusters from data.
-2022-05-18/01:15:51		Saving the KMeans cluster model.
-2022-05-18/01:15:51		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:15:51		Removing old model directory and creating fresh directory.
-2022-05-18/01:15:51		Trying to save model KMeans
-2022-05-18/01:15:51		Model saved successfully!
-2022-05-18/01:15:51		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:15:51		Save complete. Writing cluster number to data.
-2022-05-18/01:15:51		Succesfully created 3 clusters.
-2022-05-18/01:15:51		Exited the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
-2022-05-18/01:15:51		Dividing data into seperate clusters for training.
-2022-05-18/01:15:51		Scaling cluster data for cluster 1
-2022-05-18/01:15:51		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:15:51		Finding all numeric datatype columns.
-2022-05-18/01:15:51		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:15:51		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:15:51		Finding all numeric datatype columns.
-2022-05-18/01:15:51		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:15:51		Initialize model tuning for cluster 1
-2022-05-18/01:15:51		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:15:51		Starting training for XGBoost regressor.
-2022-05-18/01:15:51		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:15:51		Getting best parameter for model with Randomized search.
-2022-05-18/01:16:24		RandomizedSearchCV search for parameters complete.
-2022-05-18/01:16:24		Training XGBoost regressor with best parameters.
-2022-05-18/01:16:25		Training complete!
-2022-05-18/01:16:25		XGBoost best params: {'n_estimators': 80, 'min_samples_split': 50, 'min_samples_leaf': 20, 'max_depth': 4, 'learning_rate': 0.5}
-2022-05-18/01:16:25		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:16:25		Starting training for Random Forest regressor.
-2022-05-18/01:16:25		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:16:25		Getting best parameter for model with Randomized search.
-2022-05-18/01:18:01		Estimated required paramters.
-2022-05-18/01:18:01		Training random forest regressor with best parameters.
-2022-05-18/01:18:05		Training complete!
-2022-05-18/01:18:05		Random Forest best params: {'n_estimators': 50, 'min_samples_split': 80, 'min_samples_leaf': 30, 'max_depth': 12}
-2022-05-18/01:18:05		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:18:05		Evaluating XGBoost prediction and calculating score.
-2022-05-18/01:18:05		RMSE for XGBoost:8.266550357506924
-2022-05-18/01:18:05		R2 score for XGBoost:0.744706182876816
-2022-05-18/01:18:05		Evaluating Random forest prediction and calculating score.
-2022-05-18/01:18:05		RMSE for RF: 8.078316992017209
-2022-05-18/01:18:05		R2 score for RF: 0.7562001426551668
-2022-05-18/01:18:05		Based on scores Random Forest model is selected!
-2022-05-18/01:18:05		Model RandomForest selected for cluster 1. Saving model.
-2022-05-18/01:18:05		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:18:05		Removing old model directory and creating fresh directory.
-2022-05-18/01:18:05		Trying to save model RandomForest1
-2022-05-18/01:18:05		Model saved successfully!
-2022-05-18/01:18:05		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:18:05		Training complete for Cluster 1
-2022-05-18/01:18:05		Scaling cluster data for cluster 0
-2022-05-18/01:18:05		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:18:05		Finding all numeric datatype columns.
-2022-05-18/01:18:05		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:18:05		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:18:05		Finding all numeric datatype columns.
-2022-05-18/01:18:05		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:18:05		Initialize model tuning for cluster 0
-2022-05-18/01:18:05		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:18:05		Starting training for XGBoost regressor.
-2022-05-18/01:18:05		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:18:05		Getting best parameter for model with Randomized search.
-2022-05-18/01:18:35		RandomizedSearchCV search for parameters complete.
-2022-05-18/01:18:35		Training XGBoost regressor with best parameters.
-2022-05-18/01:18:37		Training complete!
-2022-05-18/01:18:37		XGBoost best params: {'n_estimators': 100, 'min_samples_split': 150, 'min_samples_leaf': 50, 'max_depth': 6, 'learning_rate': 0.1}
-2022-05-18/01:18:37		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:18:37		Starting training for Random Forest regressor.
-2022-05-18/01:18:37		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:18:37		Getting best parameter for model with Randomized search.
-2022-05-18/01:20:07		Estimated required paramters.
-2022-05-18/01:20:07		Training random forest regressor with best parameters.
-2022-05-18/01:20:12		Training complete!
-2022-05-18/01:20:12		Random Forest best params: {'n_estimators': 100, 'min_samples_split': 70, 'min_samples_leaf': 40, 'max_depth': 12}
-2022-05-18/01:20:12		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:20:12		Evaluating XGBoost prediction and calculating score.
-2022-05-18/01:20:12		RMSE for XGBoost:14.159318092856717
-2022-05-18/01:20:12		R2 score for XGBoost:0.8886803533462613
-2022-05-18/01:20:12		Evaluating Random forest prediction and calculating score.
-2022-05-18/01:20:13		RMSE for RF: 15.789809453340643
-2022-05-18/01:20:13		R2 score for RF: 0.861566588842857
-2022-05-18/01:20:13		Based on scores XGBoost model is selected!
-2022-05-18/01:20:13		Model XGBoost selected for cluster 0. Saving model.
-2022-05-18/01:20:13		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:20:13		Removing old model directory and creating fresh directory.
-2022-05-18/01:20:13		Trying to save model XGBoost0
-2022-05-18/01:20:13		Model saved successfully!
-2022-05-18/01:20:13		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:20:13		Training complete for Cluster 0
-2022-05-18/01:20:13		Scaling cluster data for cluster 2
-2022-05-18/01:20:13		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:20:13		Finding all numeric datatype columns.
-2022-05-18/01:20:13		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:20:13		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:20:13		Finding all numeric datatype columns.
-2022-05-18/01:20:13		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:20:13		Initialize model tuning for cluster 2
-2022-05-18/01:20:13		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:20:13		Starting training for XGBoost regressor.
-2022-05-18/01:20:13		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:20:13		Getting best parameter for model with Randomized search.
-2022-05-18/01:20:27		RandomizedSearchCV search for parameters complete.
-2022-05-18/01:20:27		Training XGBoost regressor with best parameters.
-2022-05-18/01:20:28		Training complete!
-2022-05-18/01:20:28		XGBoost best params: {'n_estimators': 80, 'min_samples_split': 150, 'min_samples_leaf': 40, 'max_depth': 8, 'learning_rate': 0.1}
-2022-05-18/01:20:28		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:20:28		Starting training for Random Forest regressor.
-2022-05-18/01:20:28		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:20:28		Getting best parameter for model with Randomized search.
-2022-05-18/01:20:43		Estimated required paramters.
-2022-05-18/01:20:43		Training random forest regressor with best parameters.
-2022-05-18/01:20:45		Training complete!
-2022-05-18/01:20:45		Random Forest best params: {'n_estimators': 100, 'min_samples_split': 70, 'min_samples_leaf': 30, 'max_depth': 6}
-2022-05-18/01:20:45		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:20:45		Evaluating XGBoost prediction and calculating score.
-2022-05-18/01:20:45		RMSE for XGBoost:6.4553216517778536
-2022-05-18/01:20:45		R2 score for XGBoost:0.9795255660107728
-2022-05-18/01:20:45		Evaluating Random forest prediction and calculating score.
-2022-05-18/01:20:45		RMSE for RF: 12.09575360901586
-2022-05-18/01:20:45		R2 score for RF: 0.9281143847441446
-2022-05-18/01:20:45		Based on scores XGBoost model is selected!
-2022-05-18/01:20:45		Model XGBoost selected for cluster 2. Saving model.
-2022-05-18/01:20:45		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:20:45		Removing old model directory and creating fresh directory.
-2022-05-18/01:20:45		Trying to save model XGBoost2
-2022-05-18/01:20:45		Model saved successfully!
-2022-05-18/01:20:45		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:20:45		Training complete for Cluster 2
-2022-05-18/01:20:45		Training finished for the data train_input_003
-2022-05-18/01:20:45		Loaded data from train_input_002.
-2022-05-18/01:20:45		Initialize Preprocessor class.
-2022-05-18/01:20:45		Dropping redundant setting columns.
-2022-05-18/01:20:45		Entered the get_redundant_settings method of the Preprocessor class
-2022-05-18/01:20:45		Found 6 setting(s).
-2022-05-18/01:20:45		No settings columns dropped.
-2022-05-18/01:20:45		Dropping sensor columns acc to data visualisation/eda.
-2022-05-18/01:20:45		Starting drop_sensor method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:20:45		Dropping columns with zero standard deviation.
-2022-05-18/01:20:45		Entered the drop_columns_with_zero_std_deviation method of the Preprocessor class
-2022-05-18/01:20:45		No columns need to be dropped.
-2022-05-18/01:20:45		Checking data for null values.
-2022-05-18/01:20:45		Entered the is_null_present method of the Preprocessor class
-2022-05-18/01:20:45		Exiting the is_null_present method of the Preprocessor class
-2022-05-18/01:20:45		No columns with null values found in data.
-2022-05-18/01:20:45		Adding remaining useful life column to data.
-2022-05-18/01:20:45		Starting add_remaining_useful_life method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:20:46		Successfully added remaining useful life column to data.
-2022-05-18/01:20:46		Initialise data clustering.
-2022-05-18/01:20:46		Entered the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
-2022-05-18/01:20:46		Plotting elbow plot to identify number of clusters.
-2022-05-18/01:20:55		Saving elbow plot to preprocessing data directory.
-2022-05-18/01:20:55		Saved plot successfully.
-2022-05-18/01:20:55		The optimum number of clusters is:3
-2022-05-18/01:20:55		Exited the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
-2022-05-18/01:20:55		Entered the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
-2022-05-18/01:20:55		Creating optimum number of clusters from data.
-2022-05-18/01:20:55		Saving the KMeans cluster model.
-2022-05-18/01:20:55		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:20:55		Removing old model directory and creating fresh directory.
-2022-05-18/01:20:55		Trying to save model KMeans
-2022-05-18/01:20:55		Model saved successfully!
-2022-05-18/01:20:55		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:20:55		Save complete. Writing cluster number to data.
-2022-05-18/01:20:55		Succesfully created 3 clusters.
-2022-05-18/01:20:55		Exited the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
-2022-05-18/01:20:55		Dividing data into seperate clusters for training.
-2022-05-18/01:20:55		Scaling cluster data for cluster 2
-2022-05-18/01:20:55		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:20:55		Finding all numeric datatype columns.
-2022-05-18/01:20:55		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:20:55		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:20:55		Finding all numeric datatype columns.
-2022-05-18/01:20:55		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:20:55		Initialize model tuning for cluster 2
-2022-05-18/01:20:55		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:20:55		Starting training for XGBoost regressor.
-2022-05-18/01:20:55		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:20:55		Getting best parameter for model with Randomized search.
-2022-05-18/01:22:21		RandomizedSearchCV search for parameters complete.
-2022-05-18/01:22:21		Training XGBoost regressor with best parameters.
-2022-05-18/01:22:26		Training complete!
-2022-05-18/01:22:26		XGBoost best params: {'n_estimators': 100, 'min_samples_split': 150, 'min_samples_leaf': 20, 'max_depth': 8, 'learning_rate': 0.1}
-2022-05-18/01:22:26		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:22:26		Starting training for Random Forest regressor.
-2022-05-18/01:22:26		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:22:26		Getting best parameter for model with Randomized search.
-2022-05-18/01:34:09		Estimated required paramters.
-2022-05-18/01:34:09		Training random forest regressor with best parameters.
-2022-05-18/01:35:01		Training complete!
-2022-05-18/01:35:01		Random Forest best params: {'n_estimators': 130, 'min_samples_split': 60, 'min_samples_leaf': 30, 'max_depth': 12}
-2022-05-18/01:35:01		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:35:01		Evaluating XGBoost prediction and calculating score.
-2022-05-18/01:35:01		RMSE for XGBoost:14.968525546859906
-2022-05-18/01:35:01		R2 score for XGBoost:0.8705314775308147
-2022-05-18/01:35:01		Evaluating Random forest prediction and calculating score.
-2022-05-18/01:35:01		RMSE for RF: 17.083141018749416
-2022-05-18/01:35:01		R2 score for RF: 0.8313673760230462
-2022-05-18/01:35:01		Based on scores XGBoost model is selected!
-2022-05-18/01:35:02		Model XGBoost selected for cluster 2. Saving model.
-2022-05-18/01:35:02		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:35:02		Removing old model directory and creating fresh directory.
-2022-05-18/01:35:02		Trying to save model XGBoost2
-2022-05-18/01:35:02		Model saved successfully!
-2022-05-18/01:35:02		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:35:02		Training complete for Cluster 2
-2022-05-18/01:35:02		Scaling cluster data for cluster 0
-2022-05-18/01:35:02		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:35:02		Finding all numeric datatype columns.
-2022-05-18/01:35:02		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:35:02		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:35:02		Finding all numeric datatype columns.
-2022-05-18/01:35:02		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:35:02		Initialize model tuning for cluster 0
-2022-05-18/01:35:02		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:35:02		Starting training for XGBoost regressor.
-2022-05-18/01:35:02		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:35:02		Getting best parameter for model with Randomized search.
-2022-05-18/01:35:15		RandomizedSearchCV search for parameters complete.
-2022-05-18/01:35:15		Training XGBoost regressor with best parameters.
-2022-05-18/01:35:15		Training complete!
-2022-05-18/01:35:15		XGBoost best params: {'n_estimators': 50, 'min_samples_split': 150, 'min_samples_leaf': 40, 'max_depth': 4, 'learning_rate': 0.1}
-2022-05-18/01:35:15		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:35:15		Starting training for Random Forest regressor.
-2022-05-18/01:35:15		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:35:15		Getting best parameter for model with Randomized search.
-2022-05-18/01:36:49		Estimated required paramters.
-2022-05-18/01:36:49		Training random forest regressor with best parameters.
-2022-05-18/01:36:56		Training complete!
-2022-05-18/01:36:56		Random Forest best params: {'n_estimators': 100, 'min_samples_split': 100, 'min_samples_leaf': 30, 'max_depth': 12}
-2022-05-18/01:36:56		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:36:56		Evaluating XGBoost prediction and calculating score.
-2022-05-18/01:36:56		RMSE for XGBoost:17.011014405805266
-2022-05-18/01:36:56		R2 score for XGBoost:0.8331548749673693
-2022-05-18/01:36:56		Evaluating Random forest prediction and calculating score.
-2022-05-18/01:36:56		RMSE for RF: 18.24816340197122
-2022-05-18/01:36:56		R2 score for RF: 0.8080043366490588
-2022-05-18/01:36:56		Based on scores XGBoost model is selected!
-2022-05-18/01:36:56		Model XGBoost selected for cluster 0. Saving model.
-2022-05-18/01:36:56		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:36:56		Removing old model directory and creating fresh directory.
-2022-05-18/01:36:56		Trying to save model XGBoost0
-2022-05-18/01:36:56		Model saved successfully!
-2022-05-18/01:36:56		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:36:56		Training complete for Cluster 0
-2022-05-18/01:36:56		Scaling cluster data for cluster 1
-2022-05-18/01:36:56		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:36:56		Finding all numeric datatype columns.
-2022-05-18/01:36:57		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:36:57		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:36:57		Finding all numeric datatype columns.
-2022-05-18/01:36:57		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
-2022-05-18/01:36:57		Initialize model tuning for cluster 1
-2022-05-18/01:36:57		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:36:57		Starting training for XGBoost regressor.
-2022-05-18/01:36:57		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:36:57		Getting best parameter for model with Randomized search.
-2022-05-18/01:38:32		RandomizedSearchCV search for parameters complete.
-2022-05-18/01:38:32		Training XGBoost regressor with best parameters.
-2022-05-18/01:38:38		Training complete!
-2022-05-18/01:38:38		XGBoost best params: {'n_estimators': 100, 'min_samples_split': 50, 'min_samples_leaf': 40, 'max_depth': 8, 'learning_rate': 0.1}
-2022-05-18/01:38:38		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:38:38		Starting training for Random Forest regressor.
-2022-05-18/01:38:38		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:38:38		Getting best parameter for model with Randomized search.
-2022-05-18/01:48:20		Estimated required paramters.
-2022-05-18/01:48:20		Training random forest regressor with best parameters.
-2022-05-18/01:49:09		Training complete!
-2022-05-18/01:49:09		Random Forest best params: {'n_estimators': 130, 'min_samples_split': 60, 'min_samples_leaf': 50, 'max_depth': 12}
-2022-05-18/01:49:09		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
-2022-05-18/01:49:09		Evaluating XGBoost prediction and calculating score.
-2022-05-18/01:49:09		RMSE for XGBoost:14.545862738646955
-2022-05-18/01:49:09		R2 score for XGBoost:0.8786165445301584
-2022-05-18/01:49:09		Evaluating Random forest prediction and calculating score.
-2022-05-18/01:49:09		RMSE for RF: 18.118230292157893
-2022-05-18/01:49:09		R2 score for RF: 0.8116732215369058
-2022-05-18/01:49:09		Based on scores XGBoost model is selected!
-2022-05-18/01:49:09		Model XGBoost selected for cluster 1. Saving model.
-2022-05-18/01:49:09		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:49:09		Removing old model directory and creating fresh directory.
-2022-05-18/01:49:09		Trying to save model XGBoost1
-2022-05-18/01:49:09		Model saved successfully!
-2022-05-18/01:49:09		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
-2022-05-18/01:49:09		Training complete for Cluster 1
-2022-05-18/01:49:09		Training finished for the data train_input_002
-2022-05-18/01:49:09		Training completed for all datasets.
+2022-05-20/01:32:42		Created an instance of <class 'trainingModel.trainModel'> class.
+2022-05-20/01:32:45		Start of Training
+2022-05-20/01:32:45		Start data ingestion.
+2022-05-20/01:32:45		Entered the get_data method of the Data_Getter class
+2022-05-20/01:32:45		Checking all valid files in Training_FileFromDB/.
+2022-05-20/01:32:45		Generating dataframe generator object for files.
+2022-05-20/01:32:45		Data Load Successful.Exited the get_data method of the Data_Getter class
+2022-05-20/01:32:45		Data ingestion completed.
+2022-05-20/01:32:45		Loaded data from train_input_001.
+2022-05-20/01:32:45		Initialize Preprocessor class.
+2022-05-20/01:32:45		Adding remaining useful life column to data.
+2022-05-20/01:32:45		Starting add_remaining_useful_life method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:32:45		Successfully added remaining useful life column to data.
+2022-05-20/01:32:45		Dropping redundant setting columns.
+2022-05-20/01:32:45		Entered the get_redundant_settings method of the Preprocessor class
+2022-05-20/01:32:45		Found 1 setting(s).
+2022-05-20/01:32:45		Dropping settings columns.
+2022-05-20/01:32:45		Entered the remove_columns method of the Preprocessor class
+2022-05-20/01:32:45		Column removal Successful. Exiting remove_columns method.
+2022-05-20/01:32:45		Dropping sensor columns acc to data visualisation/eda.
+2022-05-20/01:32:45		Starting drop_sensor method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:32:45		Dropping columns with zero standard deviation.
+2022-05-20/01:32:45		Entered the drop_columns_with_zero_std_deviation method of the Preprocessor class
+2022-05-20/01:32:45		No columns need to be dropped.
+2022-05-20/01:32:45		Checking data for null values.
+2022-05-20/01:32:45		Entered the is_null_present method of the Preprocessor class
+2022-05-20/01:32:45		Exiting the is_null_present method of the Preprocessor class
+2022-05-20/01:32:45		No columns with null values found in data.
+2022-05-20/01:32:45		Initialise data clustering.
+2022-05-20/01:32:45		Entered the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/01:32:45		Plotting elbow plot to identify number of clusters.
+2022-05-20/01:32:56		Saving elbow plot to preprocessing data directory.
+2022-05-20/01:32:56		Saved plot successfully.
+2022-05-20/01:32:56		The optimum number of clusters is:3
+2022-05-20/01:32:56		Exited the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/01:32:56		Entered the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/01:32:56		Creating optimum number of clusters from data.
+2022-05-20/01:32:57		Saving the KMeans cluster model.
+2022-05-20/01:32:57		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:32:57		Removing old model directory and creating fresh directory.
+2022-05-20/01:32:57		Trying to save model KMeans
+2022-05-20/01:32:57		Model saved successfully!
+2022-05-20/01:32:57		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:32:57		Save complete. Writing cluster number to data.
+2022-05-20/01:32:57		Succesfully created 3 clusters.
+2022-05-20/01:32:57		Exited the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/01:32:57		Dividing data into seperate clusters for training.
+2022-05-20/01:32:57		Scaling cluster data for cluster 1
+2022-05-20/01:32:57		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:32:57		Finding all numeric datatype columns.
+2022-05-20/01:32:57		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:32:57		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:32:57		Finding all numeric datatype columns.
+2022-05-20/01:32:57		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:32:57		Initialize model tuning for cluster 1
+2022-05-20/01:32:57		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:32:57		Starting training for XGBoost regressor.
+2022-05-20/01:32:57		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:32:57		Getting best parameter for model with Randomized search.
+2022-05-20/01:33:50		RandomizedSearchCV search for parameters complete.
+2022-05-20/01:33:50		Training XGBoost regressor with best parameters.
+2022-05-20/01:33:51		Training complete!
+2022-05-20/01:33:51		XGBoost best params: {'n_estimators': 100, 'min_samples_split': 100, 'min_samples_leaf': 30, 'max_depth': 4, 'learning_rate': 0.1}
+2022-05-20/01:33:51		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:33:51		Starting training for Random Forest regressor.
+2022-05-20/01:33:51		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:33:51		Getting best parameter for model with Randomized search.
+2022-05-20/01:35:21		Estimated required paramters.
+2022-05-20/01:35:21		Training random forest regressor with best parameters.
+2022-05-20/01:35:28		Training complete!
+2022-05-20/01:35:28		Random Forest best params: {'n_estimators': 130, 'min_samples_split': 80, 'min_samples_leaf': 40, 'max_depth': 8}
+2022-05-20/01:35:28		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:35:28		Evaluating XGBoost prediction and calculating score.
+2022-05-20/01:35:28		RMSE for XGBoost:20.03302547520189
+2022-05-20/01:35:28		R2 score for XGBoost:0.7311592159333935
+2022-05-20/01:35:28		Evaluating Random forest prediction and calculating score.
+2022-05-20/01:35:28		RMSE for RF: 20.11309340148912
+2022-05-20/01:35:28		R2 score for RF: 0.7290059175533661
+2022-05-20/01:35:28		Based on scores XGBoost model is selected!
+2022-05-20/01:35:28		Model XGBoost selected for cluster 1. Saving model.
+2022-05-20/01:35:28		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:35:28		Removing old model directory and creating fresh directory.
+2022-05-20/01:35:28		Trying to save model XGBoost1
+2022-05-20/01:35:28		Model saved successfully!
+2022-05-20/01:35:28		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:35:28		Training complete for Cluster 1
+2022-05-20/01:35:28		Scaling cluster data for cluster 0
+2022-05-20/01:35:28		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:35:28		Finding all numeric datatype columns.
+2022-05-20/01:35:28		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:35:28		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:35:28		Finding all numeric datatype columns.
+2022-05-20/01:35:28		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:35:28		Initialize model tuning for cluster 0
+2022-05-20/01:35:28		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:35:28		Starting training for XGBoost regressor.
+2022-05-20/01:35:28		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:35:28		Getting best parameter for model with Randomized search.
+2022-05-20/01:36:01		RandomizedSearchCV search for parameters complete.
+2022-05-20/01:36:01		Training XGBoost regressor with best parameters.
+2022-05-20/01:36:01		Training complete!
+2022-05-20/01:36:01		XGBoost best params: {'n_estimators': 80, 'min_samples_split': 50, 'min_samples_leaf': 50, 'max_depth': 2, 'learning_rate': 0.1}
+2022-05-20/01:36:01		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:36:01		Starting training for Random Forest regressor.
+2022-05-20/01:36:01		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:36:01		Getting best parameter for model with Randomized search.
+2022-05-20/01:37:27		Estimated required paramters.
+2022-05-20/01:37:27		Training random forest regressor with best parameters.
+2022-05-20/01:37:31		Training complete!
+2022-05-20/01:37:31		Random Forest best params: {'n_estimators': 100, 'min_samples_split': 60, 'min_samples_leaf': 30, 'max_depth': 12}
+2022-05-20/01:37:31		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:37:31		Evaluating XGBoost prediction and calculating score.
+2022-05-20/01:37:31		RMSE for XGBoost:16.803706722353102
+2022-05-20/01:37:31		R2 score for XGBoost:0.803492413837175
+2022-05-20/01:37:31		Evaluating Random forest prediction and calculating score.
+2022-05-20/01:37:32		RMSE for RF: 16.670908136383684
+2022-05-20/01:37:32		R2 score for RF: 0.8065861136736461
+2022-05-20/01:37:32		Based on scores Random Forest model is selected!
+2022-05-20/01:37:32		Model RandomForest selected for cluster 0. Saving model.
+2022-05-20/01:37:32		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:37:32		Removing old model directory and creating fresh directory.
+2022-05-20/01:37:32		Trying to save model RandomForest0
+2022-05-20/01:37:32		Model saved successfully!
+2022-05-20/01:37:32		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:37:32		Training complete for Cluster 0
+2022-05-20/01:37:32		Scaling cluster data for cluster 2
+2022-05-20/01:37:32		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:37:32		Finding all numeric datatype columns.
+2022-05-20/01:37:32		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:37:32		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:37:32		Finding all numeric datatype columns.
+2022-05-20/01:37:32		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:37:32		Initialize model tuning for cluster 2
+2022-05-20/01:37:32		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:37:32		Starting training for XGBoost regressor.
+2022-05-20/01:37:32		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:37:32		Getting best parameter for model with Randomized search.
+2022-05-20/01:37:44		RandomizedSearchCV search for parameters complete.
+2022-05-20/01:37:44		Training XGBoost regressor with best parameters.
+2022-05-20/01:37:45		Training complete!
+2022-05-20/01:37:45		XGBoost best params: {'n_estimators': 80, 'min_samples_split': 100, 'min_samples_leaf': 20, 'max_depth': 4, 'learning_rate': 0.1}
+2022-05-20/01:37:45		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:37:45		Starting training for Random Forest regressor.
+2022-05-20/01:37:45		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:37:45		Getting best parameter for model with Randomized search.
+2022-05-20/01:37:51		Estimated required paramters.
+2022-05-20/01:37:51		Training random forest regressor with best parameters.
+2022-05-20/01:37:51		Training complete!
+2022-05-20/01:37:51		Random Forest best params: {'n_estimators': 10, 'min_samples_split': 60, 'min_samples_leaf': 30, 'max_depth': 6}
+2022-05-20/01:37:51		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:37:51		Evaluating XGBoost prediction and calculating score.
+2022-05-20/01:37:51		RMSE for XGBoost:4.425538325524201
+2022-05-20/01:37:51		R2 score for XGBoost:0.884747684499272
+2022-05-20/01:37:51		Evaluating Random forest prediction and calculating score.
+2022-05-20/01:37:51		RMSE for RF: 5.293918439390058
+2022-05-20/01:37:51		R2 score for RF: 0.8350805266285823
+2022-05-20/01:37:51		Based on scores XGBoost model is selected!
+2022-05-20/01:37:51		Model XGBoost selected for cluster 2. Saving model.
+2022-05-20/01:37:51		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:37:51		Removing old model directory and creating fresh directory.
+2022-05-20/01:37:51		Trying to save model XGBoost2
+2022-05-20/01:37:51		Model saved successfully!
+2022-05-20/01:37:51		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:37:51		Training complete for Cluster 2
+2022-05-20/01:37:51		Training finished for the data train_input_001
+2022-05-20/01:37:51		Loaded data from train_input_003.
+2022-05-20/01:37:51		Initialize Preprocessor class.
+2022-05-20/01:37:51		Adding remaining useful life column to data.
+2022-05-20/01:37:51		Starting add_remaining_useful_life method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:37:52		Successfully added remaining useful life column to data.
+2022-05-20/01:37:52		Dropping redundant setting columns.
+2022-05-20/01:37:52		Entered the get_redundant_settings method of the Preprocessor class
+2022-05-20/01:37:52		Found 1 setting(s).
+2022-05-20/01:37:52		Dropping settings columns.
+2022-05-20/01:37:52		Entered the remove_columns method of the Preprocessor class
+2022-05-20/01:37:52		Column removal Successful. Exiting remove_columns method.
+2022-05-20/01:37:52		Dropping sensor columns acc to data visualisation/eda.
+2022-05-20/01:37:52		Starting drop_sensor method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:37:52		Dropping columns with zero standard deviation.
+2022-05-20/01:37:52		Entered the drop_columns_with_zero_std_deviation method of the Preprocessor class
+2022-05-20/01:37:52		No columns need to be dropped.
+2022-05-20/01:37:52		Checking data for null values.
+2022-05-20/01:37:52		Entered the is_null_present method of the Preprocessor class
+2022-05-20/01:37:52		Exiting the is_null_present method of the Preprocessor class
+2022-05-20/01:37:52		No columns with null values found in data.
+2022-05-20/01:37:52		Initialise data clustering.
+2022-05-20/01:37:52		Entered the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/01:37:52		Plotting elbow plot to identify number of clusters.
+2022-05-20/01:38:01		Saving elbow plot to preprocessing data directory.
+2022-05-20/01:38:01		Saved plot successfully.
+2022-05-20/01:38:01		The optimum number of clusters is:3
+2022-05-20/01:38:01		Exited the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/01:38:01		Entered the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/01:38:01		Creating optimum number of clusters from data.
+2022-05-20/01:38:02		Saving the KMeans cluster model.
+2022-05-20/01:38:02		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:38:02		Removing old model directory and creating fresh directory.
+2022-05-20/01:38:02		Trying to save model KMeans
+2022-05-20/01:38:02		Model saved successfully!
+2022-05-20/01:38:02		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:38:02		Save complete. Writing cluster number to data.
+2022-05-20/01:38:02		Succesfully created 3 clusters.
+2022-05-20/01:38:02		Exited the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/01:38:02		Dividing data into seperate clusters for training.
+2022-05-20/01:38:02		Scaling cluster data for cluster 2
+2022-05-20/01:38:02		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:38:02		Finding all numeric datatype columns.
+2022-05-20/01:38:02		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:38:02		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:38:02		Finding all numeric datatype columns.
+2022-05-20/01:38:02		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:38:02		Initialize model tuning for cluster 2
+2022-05-20/01:38:02		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:38:02		Starting training for XGBoost regressor.
+2022-05-20/01:38:02		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:38:02		Getting best parameter for model with Randomized search.
+2022-05-20/01:38:43		RandomizedSearchCV search for parameters complete.
+2022-05-20/01:38:43		Training XGBoost regressor with best parameters.
+2022-05-20/01:38:43		Training complete!
+2022-05-20/01:38:43		XGBoost best params: {'n_estimators': 50, 'min_samples_split': 70, 'min_samples_leaf': 20, 'max_depth': 4, 'learning_rate': 0.1}
+2022-05-20/01:38:43		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:38:43		Starting training for Random Forest regressor.
+2022-05-20/01:38:43		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:38:43		Getting best parameter for model with Randomized search.
+2022-05-20/01:40:34		Estimated required paramters.
+2022-05-20/01:40:34		Training random forest regressor with best parameters.
+2022-05-20/01:40:42		Training complete!
+2022-05-20/01:40:42		Random Forest best params: {'n_estimators': 100, 'min_samples_split': 80, 'min_samples_leaf': 30, 'max_depth': 12}
+2022-05-20/01:40:42		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:40:42		Evaluating XGBoost prediction and calculating score.
+2022-05-20/01:40:42		RMSE for XGBoost:19.14143704757707
+2022-05-20/01:40:42		R2 score for XGBoost:0.7210804437874203
+2022-05-20/01:40:42		Evaluating Random forest prediction and calculating score.
+2022-05-20/01:40:42		RMSE for RF: 19.54527716691918
+2022-05-20/01:40:42		R2 score for RF: 0.7091871761088677
+2022-05-20/01:40:42		Based on scores XGBoost model is selected!
+2022-05-20/01:40:42		Model XGBoost selected for cluster 2. Saving model.
+2022-05-20/01:40:42		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:40:42		Removing old model directory and creating fresh directory.
+2022-05-20/01:40:42		Trying to save model XGBoost2
+2022-05-20/01:40:42		Model saved successfully!
+2022-05-20/01:40:42		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:40:42		Training complete for Cluster 2
+2022-05-20/01:40:42		Scaling cluster data for cluster 0
+2022-05-20/01:40:42		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:40:42		Finding all numeric datatype columns.
+2022-05-20/01:40:42		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:40:42		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:40:42		Finding all numeric datatype columns.
+2022-05-20/01:40:42		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:40:42		Initialize model tuning for cluster 0
+2022-05-20/01:40:42		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:40:42		Starting training for XGBoost regressor.
+2022-05-20/01:40:42		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:40:42		Getting best parameter for model with Randomized search.
+2022-05-20/01:41:38		RandomizedSearchCV search for parameters complete.
+2022-05-20/01:41:38		Training XGBoost regressor with best parameters.
+2022-05-20/01:41:38		Training complete!
+2022-05-20/01:41:38		XGBoost best params: {'n_estimators': 50, 'min_samples_split': 150, 'min_samples_leaf': 20, 'max_depth': 2, 'learning_rate': 0.1}
+2022-05-20/01:41:38		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:41:38		Starting training for Random Forest regressor.
+2022-05-20/01:41:38		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:41:38		Getting best parameter for model with Randomized search.
+2022-05-20/01:45:07		Estimated required paramters.
+2022-05-20/01:45:07		Training random forest regressor with best parameters.
+2022-05-20/01:45:18		Training complete!
+2022-05-20/01:45:18		Random Forest best params: {'n_estimators': 100, 'min_samples_split': 80, 'min_samples_leaf': 40, 'max_depth': 8}
+2022-05-20/01:45:18		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:45:18		Evaluating XGBoost prediction and calculating score.
+2022-05-20/01:45:18		RMSE for XGBoost:14.294700045841848
+2022-05-20/01:45:18		R2 score for XGBoost:0.7535209306464044
+2022-05-20/01:45:18		Evaluating Random forest prediction and calculating score.
+2022-05-20/01:45:18		RMSE for RF: 14.258810540265655
+2022-05-20/01:45:18		R2 score for RF: 0.7547570401311474
+2022-05-20/01:45:18		Based on scores Random Forest model is selected!
+2022-05-20/01:45:18		Model RandomForest selected for cluster 0. Saving model.
+2022-05-20/01:45:18		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:45:18		Removing old model directory and creating fresh directory.
+2022-05-20/01:45:18		Trying to save model RandomForest0
+2022-05-20/01:45:18		Model saved successfully!
+2022-05-20/01:45:18		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:45:18		Training complete for Cluster 0
+2022-05-20/01:45:18		Scaling cluster data for cluster 1
+2022-05-20/01:45:18		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:45:18		Finding all numeric datatype columns.
+2022-05-20/01:45:18		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:45:18		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:45:18		Finding all numeric datatype columns.
+2022-05-20/01:45:18		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:45:18		Initialize model tuning for cluster 1
+2022-05-20/01:45:18		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:45:18		Starting training for XGBoost regressor.
+2022-05-20/01:45:18		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:45:18		Getting best parameter for model with Randomized search.
+2022-05-20/01:45:34		RandomizedSearchCV search for parameters complete.
+2022-05-20/01:45:34		Training XGBoost regressor with best parameters.
+2022-05-20/01:45:34		Training complete!
+2022-05-20/01:45:34		XGBoost best params: {'n_estimators': 50, 'min_samples_split': 50, 'min_samples_leaf': 20, 'max_depth': 4, 'learning_rate': 0.1}
+2022-05-20/01:45:34		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:45:34		Starting training for Random Forest regressor.
+2022-05-20/01:45:34		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:45:34		Getting best parameter for model with Randomized search.
+2022-05-20/01:45:59		Estimated required paramters.
+2022-05-20/01:45:59		Training random forest regressor with best parameters.
+2022-05-20/01:46:00		Training complete!
+2022-05-20/01:46:00		Random Forest best params: {'n_estimators': 50, 'min_samples_split': 60, 'min_samples_leaf': 30, 'max_depth': 12}
+2022-05-20/01:46:00		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:46:00		Evaluating XGBoost prediction and calculating score.
+2022-05-20/01:46:00		RMSE for XGBoost:7.19966738007705
+2022-05-20/01:46:00		R2 score for XGBoost:0.7718354049119256
+2022-05-20/01:46:00		Evaluating Random forest prediction and calculating score.
+2022-05-20/01:46:00		RMSE for RF: 7.785316134286081
+2022-05-20/01:46:00		R2 score for RF: 0.7332061009957194
+2022-05-20/01:46:00		Based on scores XGBoost model is selected!
+2022-05-20/01:46:00		Model XGBoost selected for cluster 1. Saving model.
+2022-05-20/01:46:00		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:46:00		Removing old model directory and creating fresh directory.
+2022-05-20/01:46:00		Trying to save model XGBoost1
+2022-05-20/01:46:00		Model saved successfully!
+2022-05-20/01:46:00		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:46:00		Training complete for Cluster 1
+2022-05-20/01:46:00		Training finished for the data train_input_003
+2022-05-20/01:46:00		Loaded data from train_input_002.
+2022-05-20/01:46:00		Initialize Preprocessor class.
+2022-05-20/01:46:00		Adding remaining useful life column to data.
+2022-05-20/01:46:00		Starting add_remaining_useful_life method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:46:01		Successfully added remaining useful life column to data.
+2022-05-20/01:46:01		Dropping redundant setting columns.
+2022-05-20/01:46:01		Entered the get_redundant_settings method of the Preprocessor class
+2022-05-20/01:46:01		Found 6 setting(s).
+2022-05-20/01:46:01		No settings columns dropped.
+2022-05-20/01:46:01		Error occurred while dropping setting columns: remove_columns() missing 1 required positional argument: 'columns'
+2022-05-20/01:46:01		Exiting drop_redundant_settings method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:46:01		!! Unsuccessful End of Training !!
+2022-05-20/01:56:02		Created an instance of <class 'trainingModel.trainModel'> class.
+2022-05-20/01:56:05		Start of Training
+2022-05-20/01:56:05		Start data ingestion.
+2022-05-20/01:56:05		Entered the get_data method of the Data_Getter class
+2022-05-20/01:56:05		Checking all valid files in Training_FileFromDB/.
+2022-05-20/01:56:05		Generating dataframe generator object for files.
+2022-05-20/01:56:05		Data Load Successful.Exited the get_data method of the Data_Getter class
+2022-05-20/01:56:05		Data ingestion completed.
+2022-05-20/01:56:05		Loaded data from train_input_002.
+2022-05-20/01:56:05		Initialize Preprocessor class.
+2022-05-20/01:56:05		Adding remaining useful life column to data.
+2022-05-20/01:56:05		Starting add_remaining_useful_life method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:56:06		Successfully added remaining useful life column to data.
+2022-05-20/01:56:06		Dropping redundant setting columns.
+2022-05-20/01:56:06		Entered the get_redundant_settings method of the Preprocessor class
+2022-05-20/01:56:06		Found 6 setting(s).
+2022-05-20/01:56:06		No settings columns dropped.
+2022-05-20/01:56:06		Entered the remove_columns method of the Preprocessor class
+2022-05-20/01:56:06		Column removal Successful. Exiting remove_columns method.
+2022-05-20/01:56:06		Dropping sensor columns acc to data visualisation/eda.
+2022-05-20/01:56:06		Starting drop_sensor method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:56:06		Dropping columns with zero standard deviation.
+2022-05-20/01:56:06		Entered the drop_columns_with_zero_std_deviation method of the Preprocessor class
+2022-05-20/01:56:06		No columns need to be dropped.
+2022-05-20/01:56:06		Checking data for null values.
+2022-05-20/01:56:06		Entered the is_null_present method of the Preprocessor class
+2022-05-20/01:56:06		Exiting the is_null_present method of the Preprocessor class
+2022-05-20/01:56:06		No columns with null values found in data.
+2022-05-20/01:56:06		Initialise data clustering.
+2022-05-20/01:56:06		Entered the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/01:56:06		Plotting elbow plot to identify number of clusters.
+2022-05-20/01:56:15		Saving elbow plot to preprocessing data directory.
+2022-05-20/01:56:15		Saved plot successfully.
+2022-05-20/01:56:15		The optimum number of clusters is:3
+2022-05-20/01:56:15		Exited the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/01:56:15		Entered the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/01:56:15		Creating optimum number of clusters from data.
+2022-05-20/01:56:15		Saving the KMeans cluster model.
+2022-05-20/01:56:15		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:56:15		Removing old model directory and creating fresh directory.
+2022-05-20/01:56:15		Trying to save model KMeans
+2022-05-20/01:56:15		Model saved successfully!
+2022-05-20/01:56:15		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/01:56:15		Save complete. Writing cluster number to data.
+2022-05-20/01:56:15		Succesfully created 3 clusters.
+2022-05-20/01:56:15		Exited the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/01:56:15		Dividing data into seperate clusters for training.
+2022-05-20/01:56:15		Scaling cluster data for cluster 2
+2022-05-20/01:56:15		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:56:15		Finding all numeric datatype columns.
+2022-05-20/01:56:15		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:56:15		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:56:15		Finding all numeric datatype columns.
+2022-05-20/01:56:15		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/01:56:15		Initialize model tuning for cluster 2
+2022-05-20/01:56:15		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:56:15		Starting training for XGBoost regressor.
+2022-05-20/01:56:15		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:56:15		Getting best parameter for model with Randomized search.
+2022-05-20/01:58:16		RandomizedSearchCV search for parameters complete.
+2022-05-20/01:58:16		Training XGBoost regressor with best parameters.
+2022-05-20/01:58:18		Training complete!
+2022-05-20/01:58:18		XGBoost best params: {'n_estimators': 50, 'min_samples_split': 70, 'min_samples_leaf': 20, 'max_depth': 6, 'learning_rate': 0.1}
+2022-05-20/01:58:18		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:58:18		Starting training for Random Forest regressor.
+2022-05-20/01:58:18		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/01:58:18		Getting best parameter for model with Randomized search.
+2022-05-20/02:14:35		Estimated required paramters.
+2022-05-20/02:14:35		Training random forest regressor with best parameters.
+2022-05-20/02:15:01		Training complete!
+2022-05-20/02:15:01		Random Forest best params: {'n_estimators': 50, 'min_samples_split': 70, 'min_samples_leaf': 30, 'max_depth': 8}
+2022-05-20/02:15:01		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:15:01		Evaluating XGBoost prediction and calculating score.
+2022-05-20/02:15:01		RMSE for XGBoost:20.29724836097287
+2022-05-20/02:15:01		R2 score for XGBoost:0.7619432623607079
+2022-05-20/02:15:01		Evaluating Random forest prediction and calculating score.
+2022-05-20/02:15:01		RMSE for RF: 20.49742167346019
+2022-05-20/02:15:01		R2 score for RF: 0.757224634293389
+2022-05-20/02:15:01		Based on scores XGBoost model is selected!
+2022-05-20/02:15:01		Model XGBoost selected for cluster 2. Saving model.
+2022-05-20/02:15:01		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/02:15:01		Removing old model directory and creating fresh directory.
+2022-05-20/02:15:01		Trying to save model XGBoost2
+2022-05-20/02:15:01		Model saved successfully!
+2022-05-20/02:15:01		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/02:15:01		Training complete for Cluster 2
+2022-05-20/02:15:02		Scaling cluster data for cluster 0
+2022-05-20/02:15:02		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:15:02		Finding all numeric datatype columns.
+2022-05-20/02:15:02		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:15:02		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:15:02		Finding all numeric datatype columns.
+2022-05-20/02:15:02		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:15:02		Initialize model tuning for cluster 0
+2022-05-20/02:15:02		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:15:02		Starting training for XGBoost regressor.
+2022-05-20/02:15:02		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:15:02		Getting best parameter for model with Randomized search.
+2022-05-20/02:15:40		RandomizedSearchCV search for parameters complete.
+2022-05-20/02:15:40		Training XGBoost regressor with best parameters.
+2022-05-20/02:15:40		Training complete!
+2022-05-20/02:15:40		XGBoost best params: {'n_estimators': 50, 'min_samples_split': 50, 'min_samples_leaf': 50, 'max_depth': 4, 'learning_rate': 0.1}
+2022-05-20/02:15:40		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:15:40		Starting training for Random Forest regressor.
+2022-05-20/02:15:40		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:15:40		Getting best parameter for model with Randomized search.
+2022-05-20/02:19:16		Estimated required paramters.
+2022-05-20/02:19:16		Training random forest regressor with best parameters.
+2022-05-20/02:19:28		Training complete!
+2022-05-20/02:19:28		Random Forest best params: {'n_estimators': 130, 'min_samples_split': 60, 'min_samples_leaf': 40, 'max_depth': 8}
+2022-05-20/02:19:28		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:19:28		Evaluating XGBoost prediction and calculating score.
+2022-05-20/02:19:28		RMSE for XGBoost:20.772129789121003
+2022-05-20/02:19:28		R2 score for XGBoost:0.7512201784160908
+2022-05-20/02:19:28		Evaluating Random forest prediction and calculating score.
+2022-05-20/02:19:28		RMSE for RF: 21.147749006560385
+2022-05-20/02:19:28		R2 score for RF: 0.7421415358299819
+2022-05-20/02:19:28		Based on scores XGBoost model is selected!
+2022-05-20/02:19:28		Model XGBoost selected for cluster 0. Saving model.
+2022-05-20/02:19:28		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/02:19:28		Removing old model directory and creating fresh directory.
+2022-05-20/02:19:28		Trying to save model XGBoost0
+2022-05-20/02:19:28		Model saved successfully!
+2022-05-20/02:19:28		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/02:19:28		Training complete for Cluster 0
+2022-05-20/02:19:28		Scaling cluster data for cluster 1
+2022-05-20/02:19:28		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:19:28		Finding all numeric datatype columns.
+2022-05-20/02:19:28		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:19:28		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:19:28		Finding all numeric datatype columns.
+2022-05-20/02:19:28		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:19:28		Initialize model tuning for cluster 1
+2022-05-20/02:19:28		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:19:28		Starting training for XGBoost regressor.
+2022-05-20/02:19:28		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:19:28		Getting best parameter for model with Randomized search.
+2022-05-20/02:21:14		RandomizedSearchCV search for parameters complete.
+2022-05-20/02:21:14		Training XGBoost regressor with best parameters.
+2022-05-20/02:21:15		Training complete!
+2022-05-20/02:21:15		XGBoost best params: {'n_estimators': 10, 'min_samples_split': 50, 'min_samples_leaf': 50, 'max_depth': 6, 'learning_rate': 0.5}
+2022-05-20/02:21:15		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:21:15		Starting training for Random Forest regressor.
+2022-05-20/02:21:15		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:21:15		Getting best parameter for model with Randomized search.
+2022-05-20/02:42:22		Estimated required paramters.
+2022-05-20/02:42:22		Training random forest regressor with best parameters.
+2022-05-20/02:43:25		Training complete!
+2022-05-20/02:43:25		Random Forest best params: {'n_estimators': 100, 'min_samples_split': 70, 'min_samples_leaf': 40, 'max_depth': 12}
+2022-05-20/02:43:25		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:43:25		Evaluating XGBoost prediction and calculating score.
+2022-05-20/02:43:25		RMSE for XGBoost:26.61905981541669
+2022-05-20/02:43:25		R2 score for XGBoost:0.5934949448190288
+2022-05-20/02:43:25		Evaluating Random forest prediction and calculating score.
+2022-05-20/02:43:26		RMSE for RF: 23.155530969727693
+2022-05-20/02:43:26		R2 score for RF: 0.6923973910886799
+2022-05-20/02:43:26		Based on scores Random Forest model is selected!
+2022-05-20/02:43:26		Model RandomForest selected for cluster 1. Saving model.
+2022-05-20/02:43:26		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/02:43:26		Removing old model directory and creating fresh directory.
+2022-05-20/02:43:26		Trying to save model RandomForest1
+2022-05-20/02:43:26		Model saved successfully!
+2022-05-20/02:43:26		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/02:43:26		Training complete for Cluster 1
+2022-05-20/02:43:26		Training finished for the data train_input_002
+2022-05-20/02:43:26		Loaded data from train_input_004.
+2022-05-20/02:43:26		Initialize Preprocessor class.
+2022-05-20/02:43:26		Adding remaining useful life column to data.
+2022-05-20/02:43:26		Starting add_remaining_useful_life method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:43:27		Successfully added remaining useful life column to data.
+2022-05-20/02:43:27		Dropping redundant setting columns.
+2022-05-20/02:43:27		Entered the get_redundant_settings method of the Preprocessor class
+2022-05-20/02:43:27		Found 6 setting(s).
+2022-05-20/02:43:27		No settings columns dropped.
+2022-05-20/02:43:27		Entered the remove_columns method of the Preprocessor class
+2022-05-20/02:43:27		Column removal Successful. Exiting remove_columns method.
+2022-05-20/02:43:27		Dropping sensor columns acc to data visualisation/eda.
+2022-05-20/02:43:27		Starting drop_sensor method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:43:27		Dropping columns with zero standard deviation.
+2022-05-20/02:43:27		Entered the drop_columns_with_zero_std_deviation method of the Preprocessor class
+2022-05-20/02:43:27		No columns need to be dropped.
+2022-05-20/02:43:27		Checking data for null values.
+2022-05-20/02:43:27		Entered the is_null_present method of the Preprocessor class
+2022-05-20/02:43:27		Exiting the is_null_present method of the Preprocessor class
+2022-05-20/02:43:27		No columns with null values found in data.
+2022-05-20/02:43:27		Initialise data clustering.
+2022-05-20/02:43:27		Entered the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/02:43:27		Plotting elbow plot to identify number of clusters.
+2022-05-20/02:43:35		Saving elbow plot to preprocessing data directory.
+2022-05-20/02:43:36		Saved plot successfully.
+2022-05-20/02:43:36		The optimum number of clusters is:3
+2022-05-20/02:43:36		Exited the elbow_plot method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/02:43:36		Entered the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/02:43:36		Creating optimum number of clusters from data.
+2022-05-20/02:43:36		Saving the KMeans cluster model.
+2022-05-20/02:43:36		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/02:43:36		Removing old model directory and creating fresh directory.
+2022-05-20/02:43:36		Trying to save model KMeans
+2022-05-20/02:43:36		Model saved successfully!
+2022-05-20/02:43:36		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/02:43:36		Save complete. Writing cluster number to data.
+2022-05-20/02:43:36		Succesfully created 3 clusters.
+2022-05-20/02:43:36		Exited the create_clusters method of <class 'data_preprocessing.clustering.KMeansClustering'>
+2022-05-20/02:43:36		Dividing data into seperate clusters for training.
+2022-05-20/02:43:36		Scaling cluster data for cluster 0
+2022-05-20/02:43:36		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:43:36		Finding all numeric datatype columns.
+2022-05-20/02:43:36		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:43:36		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:43:36		Finding all numeric datatype columns.
+2022-05-20/02:43:36		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:43:36		Initialize model tuning for cluster 0
+2022-05-20/02:43:36		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:43:36		Starting training for XGBoost regressor.
+2022-05-20/02:43:36		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:43:36		Getting best parameter for model with Randomized search.
+2022-05-20/02:45:31		RandomizedSearchCV search for parameters complete.
+2022-05-20/02:45:31		Training XGBoost regressor with best parameters.
+2022-05-20/02:45:35		Training complete!
+2022-05-20/02:45:35		XGBoost best params: {'n_estimators': 100, 'min_samples_split': 150, 'min_samples_leaf': 30, 'max_depth': 6, 'learning_rate': 0.1}
+2022-05-20/02:45:35		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:45:35		Starting training for Random Forest regressor.
+2022-05-20/02:45:35		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:45:35		Getting best parameter for model with Randomized search.
+2022-05-20/02:51:06		Estimated required paramters.
+2022-05-20/02:51:06		Training random forest regressor with best parameters.
+2022-05-20/02:51:17		Training complete!
+2022-05-20/02:51:17		Random Forest best params: {'n_estimators': 50, 'min_samples_split': 60, 'min_samples_leaf': 30, 'max_depth': 10}
+2022-05-20/02:51:17		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:51:17		Evaluating XGBoost prediction and calculating score.
+2022-05-20/02:51:17		RMSE for XGBoost:18.474162910490644
+2022-05-20/02:51:17		R2 score for XGBoost:0.7978299777781712
+2022-05-20/02:51:17		Evaluating Random forest prediction and calculating score.
+2022-05-20/02:51:17		RMSE for RF: 18.81650788355995
+2022-05-20/02:51:17		R2 score for RF: 0.790267721841262
+2022-05-20/02:51:17		Based on scores XGBoost model is selected!
+2022-05-20/02:51:17		Model XGBoost selected for cluster 0. Saving model.
+2022-05-20/02:51:17		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/02:51:17		Removing old model directory and creating fresh directory.
+2022-05-20/02:51:17		Trying to save model XGBoost0
+2022-05-20/02:51:17		Model saved successfully!
+2022-05-20/02:51:17		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/02:51:17		Training complete for Cluster 0
+2022-05-20/02:51:17		Scaling cluster data for cluster 1
+2022-05-20/02:51:17		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:51:17		Finding all numeric datatype columns.
+2022-05-20/02:51:17		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:51:17		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:51:17		Finding all numeric datatype columns.
+2022-05-20/02:51:17		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/02:51:17		Initialize model tuning for cluster 1
+2022-05-20/02:51:17		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:51:17		Starting training for XGBoost regressor.
+2022-05-20/02:51:17		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:51:17		Getting best parameter for model with Randomized search.
+2022-05-20/02:53:52		RandomizedSearchCV search for parameters complete.
+2022-05-20/02:53:52		Training XGBoost regressor with best parameters.
+2022-05-20/02:53:57		Training complete!
+2022-05-20/02:53:57		XGBoost best params: {'n_estimators': 80, 'min_samples_split': 70, 'min_samples_leaf': 40, 'max_depth': 6, 'learning_rate': 0.1}
+2022-05-20/02:53:57		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:53:57		Starting training for Random Forest regressor.
+2022-05-20/02:53:57		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/02:53:57		Getting best parameter for model with Randomized search.
+2022-05-20/03:01:01		Estimated required paramters.
+2022-05-20/03:01:01		Training random forest regressor with best parameters.
+2022-05-20/03:01:22		Training complete!
+2022-05-20/03:01:22		Random Forest best params: {'n_estimators': 100, 'min_samples_split': 80, 'min_samples_leaf': 40, 'max_depth': 10}
+2022-05-20/03:01:22		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/03:01:22		Evaluating XGBoost prediction and calculating score.
+2022-05-20/03:01:22		RMSE for XGBoost:19.07839916357963
+2022-05-20/03:01:22		R2 score for XGBoost:0.7822470491666897
+2022-05-20/03:01:22		Evaluating Random forest prediction and calculating score.
+2022-05-20/03:01:22		RMSE for RF: 19.82303422980002
+2022-05-20/03:01:22		R2 score for RF: 0.7649174197745603
+2022-05-20/03:01:22		Based on scores XGBoost model is selected!
+2022-05-20/03:01:23		Model XGBoost selected for cluster 1. Saving model.
+2022-05-20/03:01:23		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/03:01:23		Removing old model directory and creating fresh directory.
+2022-05-20/03:01:23		Trying to save model XGBoost1
+2022-05-20/03:01:23		Model saved successfully!
+2022-05-20/03:01:23		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/03:01:23		Training complete for Cluster 1
+2022-05-20/03:01:23		Scaling cluster data for cluster 2
+2022-05-20/03:01:23		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/03:01:23		Finding all numeric datatype columns.
+2022-05-20/03:01:23		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/03:01:23		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/03:01:23		Finding all numeric datatype columns.
+2022-05-20/03:01:23		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/03:01:23		Initialize model tuning for cluster 2
+2022-05-20/03:01:23		Entered the get_best_model method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/03:01:23		Starting training for XGBoost regressor.
+2022-05-20/03:01:23		Entered the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/03:01:23		Getting best parameter for model with Randomized search.
+2022-05-20/03:01:55		RandomizedSearchCV search for parameters complete.
+2022-05-20/03:01:55		Training XGBoost regressor with best parameters.
+2022-05-20/03:01:56		Training complete!
+2022-05-20/03:01:56		XGBoost best params: {'n_estimators': 100, 'min_samples_split': 150, 'min_samples_leaf': 20, 'max_depth': 6, 'learning_rate': 0.1}
+2022-05-20/03:01:56		Exited the get_best_params_for_xgboost method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/03:01:56		Starting training for Random Forest regressor.
+2022-05-20/03:01:56		Entered the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/03:01:56		Getting best parameter for model with Randomized search.
+2022-05-20/03:03:09		Estimated required paramters.
+2022-05-20/03:03:09		Training random forest regressor with best parameters.
+2022-05-20/03:03:16		Training complete!
+2022-05-20/03:03:16		Random Forest best params: {'n_estimators': 130, 'min_samples_split': 60, 'min_samples_leaf': 30, 'max_depth': 12}
+2022-05-20/03:03:16		Exited the get_best_params_for_random_forest method of <class 'best_model_finder.tuner.Model_Finder'>
+2022-05-20/03:03:16		Evaluating XGBoost prediction and calculating score.
+2022-05-20/03:03:16		RMSE for XGBoost:19.48233434757504
+2022-05-20/03:03:16		R2 score for XGBoost:0.7670307568145107
+2022-05-20/03:03:16		Evaluating Random forest prediction and calculating score.
+2022-05-20/03:03:16		RMSE for RF: 19.654486532272117
+2022-05-20/03:03:16		R2 score for RF: 0.762895383818789
+2022-05-20/03:03:16		Based on scores XGBoost model is selected!
+2022-05-20/03:03:16		Model XGBoost selected for cluster 2. Saving model.
+2022-05-20/03:03:16		Entered the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/03:03:16		Removing old model directory and creating fresh directory.
+2022-05-20/03:03:16		Trying to save model XGBoost2
+2022-05-20/03:03:16		Model saved successfully!
+2022-05-20/03:03:16		Exited the save_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/03:03:16		Training complete for Cluster 2
+2022-05-20/03:03:16		Training finished for the data train_input_004
+2022-05-20/03:03:16		Training completed for all datasets.

@@ -1,0 +1,237 @@
+2022-05-20/14:45:55		Created an instance of <class 'predictFromModel.prediction'> class.
+2022-05-20/14:46:16		Start of Prediction
+2022-05-20/14:46:16		Start data ingestion.
+2022-05-20/14:46:16		Entered the get_data method of the Data_Getter class
+2022-05-20/14:46:16		Checking all valid files in Prediction_FileFromDB/.
+2022-05-20/14:46:16		Generating dataframe generator object for files.
+2022-05-20/14:46:16		Data Load Successful.Exited the get_data method of the Data_Getter class
+2022-05-20/14:46:16		Data ingestion completed.
+2022-05-20/14:46:16		Loaded data from test_input_004.
+2022-05-20/14:46:16		Initialize Preprocessor class.
+2022-05-20/14:46:16		Dropping redundant setting columns.
+2022-05-20/14:46:16		Entered the get_redundant_settings method of the Preprocessor class
+2022-05-20/14:46:16		Found 6 setting(s).
+2022-05-20/14:46:16		No settings columns dropped.
+2022-05-20/14:46:16		Dropping sensor columns acc to data visualisation/eda.
+2022-05-20/14:46:16		Starting drop_sensor method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:16		Dropping columns with zero standard deviation.
+2022-05-20/14:46:16		Entered the drop_columns_with_zero_std_deviation method of the Preprocessor class
+2022-05-20/14:46:16		No columns need to be dropped.
+2022-05-20/14:46:16		Checking data for null values.
+2022-05-20/14:46:16		Entered the is_null_present method of the Preprocessor class
+2022-05-20/14:46:16		Exiting the is_null_present method of the Preprocessor class
+2022-05-20/14:46:16		No columns with null values found in data.
+2022-05-20/14:46:16		Select last RUL row for test data.
+2022-05-20/14:46:16		Start select_last_rul of <class 'data_preprocessing.preprocessing.Preprocessor'>
+2022-05-20/14:46:16		Loading kmeans model.
+2022-05-20/14:46:16		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:16		Loaded model KMeans.
+2022-05-20/14:46:22		Adding cluster number to each row of data.
+2022-05-20/14:46:22		Finding model for cluster 2
+2022-05-20/14:46:22		Entered the find_correct_model_file method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:22		Model XGBoost2 found for cluster 2
+2022-05-20/14:46:22		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:22		Loaded model XGBoost2.
+2022-05-20/14:46:23		Scaling numerical data
+2022-05-20/14:46:23		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:23		Finding all numeric datatype columns.
+2022-05-20/14:46:23		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:23		Computed RUL value for cluster 2
+2022-05-20/14:46:23		Finding model for cluster 0
+2022-05-20/14:46:23		Entered the find_correct_model_file method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:23		Model XGBoost0 found for cluster 0
+2022-05-20/14:46:23		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:23		Loaded model XGBoost0.
+2022-05-20/14:46:23		Scaling numerical data
+2022-05-20/14:46:23		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:23		Finding all numeric datatype columns.
+2022-05-20/14:46:23		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:23		Computed RUL value for cluster 0
+2022-05-20/14:46:23		Finding model for cluster 1
+2022-05-20/14:46:23		Entered the find_correct_model_file method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:23		Model XGBoost1 found for cluster 1
+2022-05-20/14:46:23		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:23		Loaded model XGBoost1.
+2022-05-20/14:46:23		Scaling numerical data
+2022-05-20/14:46:23		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:23		Finding all numeric datatype columns.
+2022-05-20/14:46:23		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:23		Computed RUL value for cluster 1
+2022-05-20/14:46:23		Entered save_prediction method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:23		Creating output directory.
+2022-05-20/14:46:23		Prediction saved to file prediction_output_004.csv
+2022-05-20/14:46:23		Exiting save_prediction method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:23		 Saved predictions for file test_input_004
+2022-05-20/14:46:23		Loaded data from test_input_003.
+2022-05-20/14:46:23		Initialize Preprocessor class.
+2022-05-20/14:46:23		Dropping redundant setting columns.
+2022-05-20/14:46:23		Entered the get_redundant_settings method of the Preprocessor class
+2022-05-20/14:46:23		Found 1 setting(s).
+2022-05-20/14:46:23		Dropping settings columns.
+2022-05-20/14:46:23		Entered the remove_columns method of the Preprocessor class
+2022-05-20/14:46:23		Column removal Successful. Exiting remove_columns method.
+2022-05-20/14:46:23		Dropping sensor columns acc to data visualisation/eda.
+2022-05-20/14:46:23		Starting drop_sensor method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:23		Dropping columns with zero standard deviation.
+2022-05-20/14:46:23		Entered the drop_columns_with_zero_std_deviation method of the Preprocessor class
+2022-05-20/14:46:23		No columns need to be dropped.
+2022-05-20/14:46:23		Checking data for null values.
+2022-05-20/14:46:23		Entered the is_null_present method of the Preprocessor class
+2022-05-20/14:46:23		Exiting the is_null_present method of the Preprocessor class
+2022-05-20/14:46:23		No columns with null values found in data.
+2022-05-20/14:46:23		Select last RUL row for test data.
+2022-05-20/14:46:23		Start select_last_rul of <class 'data_preprocessing.preprocessing.Preprocessor'>
+2022-05-20/14:46:23		Loading kmeans model.
+2022-05-20/14:46:23		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:23		Loaded model KMeans.
+2022-05-20/14:46:23		Adding cluster number to each row of data.
+2022-05-20/14:46:23		Finding model for cluster 2
+2022-05-20/14:46:23		Entered the find_correct_model_file method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:23		Model XGBoost2 found for cluster 2
+2022-05-20/14:46:23		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:23		Loaded model XGBoost2.
+2022-05-20/14:46:23		Scaling numerical data
+2022-05-20/14:46:23		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:23		Finding all numeric datatype columns.
+2022-05-20/14:46:23		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:23		Computed RUL value for cluster 2
+2022-05-20/14:46:23		Finding model for cluster 0
+2022-05-20/14:46:23		Entered the find_correct_model_file method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:23		Model RandomForest0 found for cluster 0
+2022-05-20/14:46:23		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:23		Loaded model RandomForest0.
+2022-05-20/14:46:26		Scaling numerical data
+2022-05-20/14:46:26		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:26		Finding all numeric datatype columns.
+2022-05-20/14:46:26		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:26		Computed RUL value for cluster 0
+2022-05-20/14:46:26		Finding model for cluster 1
+2022-05-20/14:46:26		Entered the find_correct_model_file method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:26		Model XGBoost1 found for cluster 1
+2022-05-20/14:46:26		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:26		Loaded model XGBoost1.
+2022-05-20/14:46:26		Scaling numerical data
+2022-05-20/14:46:26		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:26		Finding all numeric datatype columns.
+2022-05-20/14:46:26		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:26		Computed RUL value for cluster 1
+2022-05-20/14:46:26		Entered save_prediction method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:26		Creating output directory.
+2022-05-20/14:46:26		Prediction saved to file prediction_output_003.csv
+2022-05-20/14:46:26		Exiting save_prediction method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:26		 Saved predictions for file test_input_003
+2022-05-20/14:46:27		Loaded data from test_input_002.
+2022-05-20/14:46:27		Initialize Preprocessor class.
+2022-05-20/14:46:27		Dropping redundant setting columns.
+2022-05-20/14:46:27		Entered the get_redundant_settings method of the Preprocessor class
+2022-05-20/14:46:27		Found 6 setting(s).
+2022-05-20/14:46:27		No settings columns dropped.
+2022-05-20/14:46:27		Dropping sensor columns acc to data visualisation/eda.
+2022-05-20/14:46:27		Starting drop_sensor method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:27		Dropping columns with zero standard deviation.
+2022-05-20/14:46:27		Entered the drop_columns_with_zero_std_deviation method of the Preprocessor class
+2022-05-20/14:46:27		No columns need to be dropped.
+2022-05-20/14:46:27		Checking data for null values.
+2022-05-20/14:46:27		Entered the is_null_present method of the Preprocessor class
+2022-05-20/14:46:27		Exiting the is_null_present method of the Preprocessor class
+2022-05-20/14:46:27		No columns with null values found in data.
+2022-05-20/14:46:27		Select last RUL row for test data.
+2022-05-20/14:46:27		Start select_last_rul of <class 'data_preprocessing.preprocessing.Preprocessor'>
+2022-05-20/14:46:27		Loading kmeans model.
+2022-05-20/14:46:27		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:27		Loaded model KMeans.
+2022-05-20/14:46:27		Adding cluster number to each row of data.
+2022-05-20/14:46:27		Finding model for cluster 1
+2022-05-20/14:46:27		Entered the find_correct_model_file method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:27		Model RandomForest1 found for cluster 1
+2022-05-20/14:46:27		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:27		Loaded model RandomForest1.
+2022-05-20/14:46:27		Scaling numerical data
+2022-05-20/14:46:27		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:27		Finding all numeric datatype columns.
+2022-05-20/14:46:27		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:27		Computed RUL value for cluster 1
+2022-05-20/14:46:27		Finding model for cluster 2
+2022-05-20/14:46:27		Entered the find_correct_model_file method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:27		Model XGBoost2 found for cluster 2
+2022-05-20/14:46:27		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:27		Loaded model XGBoost2.
+2022-05-20/14:46:27		Scaling numerical data
+2022-05-20/14:46:27		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:27		Finding all numeric datatype columns.
+2022-05-20/14:46:27		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:27		Computed RUL value for cluster 2
+2022-05-20/14:46:27		Finding model for cluster 0
+2022-05-20/14:46:27		Entered the find_correct_model_file method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:27		Model XGBoost0 found for cluster 0
+2022-05-20/14:46:27		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:27		Loaded model XGBoost0.
+2022-05-20/14:46:27		Scaling numerical data
+2022-05-20/14:46:27		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:27		Finding all numeric datatype columns.
+2022-05-20/14:46:27		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:27		Computed RUL value for cluster 0
+2022-05-20/14:46:27		Entered save_prediction method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:27		Creating output directory.
+2022-05-20/14:46:27		Prediction saved to file prediction_output_002.csv
+2022-05-20/14:46:27		Exiting save_prediction method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:27		 Saved predictions for file test_input_002
+2022-05-20/14:46:27		Loaded data from test_input_001.
+2022-05-20/14:46:27		Initialize Preprocessor class.
+2022-05-20/14:46:27		Dropping redundant setting columns.
+2022-05-20/14:46:27		Entered the get_redundant_settings method of the Preprocessor class
+2022-05-20/14:46:27		Found 1 setting(s).
+2022-05-20/14:46:27		Dropping settings columns.
+2022-05-20/14:46:27		Entered the remove_columns method of the Preprocessor class
+2022-05-20/14:46:27		Column removal Successful. Exiting remove_columns method.
+2022-05-20/14:46:27		Dropping sensor columns acc to data visualisation/eda.
+2022-05-20/14:46:27		Starting drop_sensor method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:27		Dropping columns with zero standard deviation.
+2022-05-20/14:46:27		Entered the drop_columns_with_zero_std_deviation method of the Preprocessor class
+2022-05-20/14:46:27		No columns need to be dropped.
+2022-05-20/14:46:27		Checking data for null values.
+2022-05-20/14:46:27		Entered the is_null_present method of the Preprocessor class
+2022-05-20/14:46:28		Exiting the is_null_present method of the Preprocessor class
+2022-05-20/14:46:28		No columns with null values found in data.
+2022-05-20/14:46:28		Select last RUL row for test data.
+2022-05-20/14:46:28		Start select_last_rul of <class 'data_preprocessing.preprocessing.Preprocessor'>
+2022-05-20/14:46:28		Loading kmeans model.
+2022-05-20/14:46:28		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:28		Loaded model KMeans.
+2022-05-20/14:46:28		Adding cluster number to each row of data.
+2022-05-20/14:46:28		Finding model for cluster 1
+2022-05-20/14:46:28		Entered the find_correct_model_file method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:28		Model XGBoost1 found for cluster 1
+2022-05-20/14:46:28		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:28		Loaded model XGBoost1.
+2022-05-20/14:46:28		Scaling numerical data
+2022-05-20/14:46:28		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:28		Finding all numeric datatype columns.
+2022-05-20/14:46:28		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:28		Computed RUL value for cluster 1
+2022-05-20/14:46:28		Finding model for cluster 0
+2022-05-20/14:46:28		Entered the find_correct_model_file method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:28		Model RandomForest0 found for cluster 0
+2022-05-20/14:46:28		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:28		Loaded model RandomForest0.
+2022-05-20/14:46:28		Scaling numerical data
+2022-05-20/14:46:28		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:28		Finding all numeric datatype columns.
+2022-05-20/14:46:28		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:28		Computed RUL value for cluster 0
+2022-05-20/14:46:28		Finding model for cluster 2
+2022-05-20/14:46:28		Entered the find_correct_model_file method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:28		Model XGBoost2 found for cluster 2
+2022-05-20/14:46:28		Entered the load_model method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:28		Loaded model XGBoost2.
+2022-05-20/14:46:28		Scaling numerical data
+2022-05-20/14:46:28		Starting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:28		Finding all numeric datatype columns.
+2022-05-20/14:46:28		Data scaled successfully. Exiting scaleData method of <class 'data_preprocessing.preprocessing.Preprocessor'> class.
+2022-05-20/14:46:28		Computed RUL value for cluster 2
+2022-05-20/14:46:28		Entered save_prediction method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:28		Creating output directory.
+2022-05-20/14:46:28		Prediction saved to file prediction_output_001.csv
+2022-05-20/14:46:28		Exiting save_prediction method of <class 'file_operations.file_methods.File_Operation'>
+2022-05-20/14:46:28		 Saved predictions for file test_input_001
+2022-05-20/14:46:28		Predictions saved for all files.

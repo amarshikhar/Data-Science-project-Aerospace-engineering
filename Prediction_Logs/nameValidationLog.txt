@@ -1,0 +1,11 @@
+2022-05-18/20:58:15		Starting validation of file name.
+2022-05-18/20:58:15		Deleting existing good and bad raw data directories.
+2022-05-18/20:58:15		Creating new good and bad raw data directories.
+2022-05-18/20:58:15		Created new good and bad raw data directories.
+2022-05-18/20:58:15		Matching file  names with regex.
+2022-05-18/20:58:15		Invalid File Name!! File moved to Bad Raw Folder :: .DS_Store
+2022-05-18/20:58:15		Valid File name!! File moved to GoodRaw Folder :: test_FD003.txt
+2022-05-18/20:58:15		Valid File name!! File moved to GoodRaw Folder :: test_FD002.txt
+2022-05-18/20:58:15		Valid File name!! File moved to GoodRaw Folder :: test_FD001.txt
+2022-05-18/20:58:15		Valid File name!! File moved to GoodRaw Folder :: test_FD004.txt
+2022-05-18/20:58:15		Name validation finished.

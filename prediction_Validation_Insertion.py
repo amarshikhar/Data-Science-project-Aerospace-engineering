@@ -1,10 +1,10 @@
-from Prediction_Raw_data_validation.rawValidation import Raw_Data_validation
-from DataTypeValidation_Insertion_Training.DataTypeValidation import dBOperation
+from Prediction_Raw_Data_Validation.predictionDataValidation import Prediction_Data_validation
+from DataTypeValidation_Insertion_Prediction.DataTypeValidationPrediction import dBOperation
 from application_logging import logger
 import os
 
 
-class pred_validation:#train->pred
+class pred_validation:  # train->pred
     def __init__(self, path):
         # first create the log directory before anything
         if not os.path.isdir('Prediction_Logs'):
@@ -34,14 +34,14 @@ class pred_validation:#train->pred
 
             # begin validation part, create validator
             self.log_writer.log(self.file_object, 'Start validation of files.')
-            validator = Raw_Data_validation(self.path)
+            validator = Prediction_Data_validation(self.path)
             self.log_writer.log(self.file_object, 'Created validator object.')
             # extracting values from prediction schema
             self.log_writer.log(self.file_object, 'Getting values from schema file')
             column_names, noofcolumns = validator.valuesFromSchema()
             # getting the regex defined to validate filename
             self.log_writer.log(self.file_object, 'Getting file name regex')
-            regex = Raw_Data_validation(self.path).manualRegexCreation()
+            regex = validator.manualRegexCreation()
             # validating filename of prediction files
             self.log_writer.log(self.file_object, 'Validating file name using regex')
             validator.validationFileNameRaw(regex)
@@ -57,11 +57,11 @@ class pred_validation:#train->pred
             # create db operation instance
             db_operator = dBOperation()
             self.log_writer.log(self.file_object, "Created database operator.")
-            db_operator.selectingDatafromtableintocsv('predictdb')#traindb->predictdb
+            db_operator.selectingDatafromtableintocsv('predictdb')  # traindb->predictdb
             self.log_writer.log(self.file_object, "Exporting csv files from tables completed")
 
             self.log_writer.log(self.file_object, "Cleaning up raw data directories")
-            validator.deleteExistingGoodDataPredictionFolder()#Training->Prediction
+            validator.deleteExistingGoodDataPredictionFolder()  # Training->Prediction
             self.log_writer.log(self.file_object, "Good_Data folder deleted.")
 
             # Move the bad files to archive folder

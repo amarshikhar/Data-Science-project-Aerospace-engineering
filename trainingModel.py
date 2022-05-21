@@ -33,12 +33,20 @@ class trainModel:
                 self.log_writer.log(self.file_object, 'Data ingestion completed.')
 
                 for data, filename in datagen():
-                    filename = filename.split('.')[0]  # redifine filename without the .csv part!
+                    filename = filename.split('.')[0]  # redefine filename without the .csv part!
                     """doing the data preprocessing"""
                     self.log_writer.log(self.file_object, f"Loaded data from {filename}.")
 
                     self.log_writer.log(self.file_object, "Initialize Preprocessor class.")
-                    preprocessor = preprocessing.Preprocessor(self.file_object ,self.log_writer)
+                    preprocessor = preprocessing.Preprocessor(self.file_object,self.log_writer)
+
+                    # add RUL column
+                    self.log_writer.log(self.file_object, "Adding remaining useful life column to data.")
+                    data = preprocessor.add_remaining_useful_life(data)
+
+                    # drop unit_nr and time_cycles
+                    self.log_writer.log(self.file_object, "Dropping unit_nr and time_cycles column")
+                    data = preprocessor.remove_columns(data, ['unit_nr', 'time_cycles'])
 
                     self.log_writer.log(self.file_object, "Dropping redundant setting columns.")
                     data = preprocessor.drop_redundant_settings(data)
@@ -47,7 +55,7 @@ class trainModel:
                     data = preprocessor.drop_sensor(data, filename)
 
                     self.log_writer.log(self.file_object, "Dropping columns with zero standard deviation.")
-                    data = preprocessor.drop_columns_with_zero_std_deviation(data)   
+                    data = preprocessor.drop_columns_with_zero_std_deviation(data)
 
                     # impute null values
                     self.log_writer.log(self.file_object, "Checking data for null values.")
@@ -58,10 +66,6 @@ class trainModel:
                         data = preprocessor.impute_missing_values(data)
                     else:
                         self.log_writer.log(self.file_object, "No columns with null values found in data.")
-
-                    # add RUL column
-                    self.log_writer.log(self.file_object, "Adding remaining useful life column to data.")
-                    data = preprocessor.add_remaining_useful_life(data)
 
                     X = data.drop(['RUL'], axis=1)
                     Y = data['RUL']

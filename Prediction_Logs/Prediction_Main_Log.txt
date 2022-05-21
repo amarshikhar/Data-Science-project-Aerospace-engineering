@@ -1,0 +1,16 @@
+2022-05-18/20:58:15		Start validation of files.
+2022-05-18/20:58:15		Created validator object.
+2022-05-18/20:58:15		Getting values from schema file
+2022-05-18/20:58:15		Getting file name regex
+2022-05-18/20:58:15		Validating file name using regex
+2022-05-18/20:58:15		Validating number of columns
+2022-05-18/20:58:16		Validating if any column has all NULL values.
+2022-05-18/20:58:17		Raw Data Validation Complete!!
+2022-05-18/20:58:17		Starting database to csv file process.
+2022-05-18/20:58:17		Created database operator.
+2022-05-18/21:00:24		Exporting csv files from tables completed
+2022-05-18/21:00:24		Cleaning up raw data directories
+2022-05-18/21:00:24		Good_Data folder deleted.
+2022-05-18/21:00:24		Moving bad files to Archive and deleting Bad_Data folder.
+2022-05-18/21:00:24		Bad files moved to archive!! Bad folder Deleted!!
+2022-05-18/21:00:24		Data validation and importing completed.
