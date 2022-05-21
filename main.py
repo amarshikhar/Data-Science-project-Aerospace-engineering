@@ -30,7 +30,7 @@ def predictRouteClient():
 
             pred_val = pred_validation(path) #object initialization
 
-            pred_val.prediction_validation() #calling the prediction_validation function
+            pred_val.pred_validation() #calling the prediction_validation function
 
             pred = prediction(path) #object initialization
 
@@ -42,7 +42,7 @@ def predictRouteClient():
 
             pred_val = pred_validation(path) #object initialization
 
-            pred_val.prediction_validation() #calling the prediction_validation function
+            pred_val.pred_validation() #calling the prediction_validation function
 
             pred = prediction(path) #object initialization
 

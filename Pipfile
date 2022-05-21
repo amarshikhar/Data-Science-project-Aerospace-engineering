@@ -10,6 +10,9 @@ scikit-learn = "*"
 kneed = "*"
 xgboost = "*"
 cassandra-driver = "*"
+flask = "*"
+flask-cors = "*"
+flask-monitoringdashboard = "*"
 
 [dev-packages]
 
