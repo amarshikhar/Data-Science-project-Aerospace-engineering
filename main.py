@@ -13,6 +13,7 @@ os.putenv('LANG', 'en_US.UTF-8')
 os.putenv('LC_ALL', 'en_US.UTF-8')
 
 app = Flask(__name__)
+app.debug=True
 dashboard.bind(app)
 CORS(app)
 
@@ -26,29 +27,30 @@ def home():
 def predictRouteClient():
     try:
         if request.json is not None:
-            path = request.json['filepath']
+            # path = request.json['filepath']
+            data= request.get_json()
+            path=data['filepath']
+            pred_val = pred_validation(path) #object initialization(path)
 
-            pred_val = pred_validation(path) #object initialization
+            pred_val.pred_validation() #calling the pred_validation function
 
-            pred_val.pred_validation() #calling the prediction_validation function
-
-            pred = prediction(path) #object initialization
-
-            # predicting for dataset present in database
-            path = pred.predictionFromModel()
-            return Response("Prediction File created at %s!!!" % path)
-        elif request.form is not None:
-            path = request.form['filepath']
-
-            pred_val = pred_validation(path) #object initialization
-
-            pred_val.pred_validation() #calling the prediction_validation function
-
-            pred = prediction(path) #object initialization
+            pred = prediction() #object initialization(path)
 
             # predicting for dataset present in database
             path = pred.predictionFromModel()
             return Response("Prediction File created at %s!!!" % path)
+        # elif request.form is not None:
+            # path = request.json['filepath']
+            #
+            # pred_val = pred_validation(path) #object initialization(path)
+            #
+            # pred_val.pred_validation() #calling the prediction_validation function
+            #
+            # pred = prediction() #object initialization(path)
+            #
+            # # predicting for dataset present in database
+            # path = pred.predictionFromModel()
+            # return Response("Prediction File created at %s!!!" % path)
 
     except ValueError:
         return Response("Error Occurred! %s" %ValueError)
@@ -90,9 +92,9 @@ def trainRouteClient():
 
 port = int(os.getenv("PORT",5001))
 if __name__ == "__main__":
-    # host = '0.0.0.0'
+    host = '0.0.0.0'
     ## port = 5000
-    app.run(debug=True)
-    # httpd = simple_server.make_server(host, port, app)
-    ## print("Serving on %s %d" % (host, port))
-    # httpd.serve_forever()
+    # app.run(debug=True)
+    httpd = simple_server.make_server(host, port, app)
+    print("Serving on %s %d" % (host, port))
+    httpd.serve_forever()

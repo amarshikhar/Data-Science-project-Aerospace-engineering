@@ -1,11 +1,33 @@
-2022-05-18/20:58:15		Starting validation of file name.
-2022-05-18/20:58:15		Deleting existing good and bad raw data directories.
-2022-05-18/20:58:15		Creating new good and bad raw data directories.
-2022-05-18/20:58:15		Created new good and bad raw data directories.
-2022-05-18/20:58:15		Matching file  names with regex.
-2022-05-18/20:58:15		Invalid File Name!! File moved to Bad Raw Folder :: .DS_Store
-2022-05-18/20:58:15		Valid File name!! File moved to GoodRaw Folder :: test_FD003.txt
-2022-05-18/20:58:15		Valid File name!! File moved to GoodRaw Folder :: test_FD002.txt
-2022-05-18/20:58:15		Valid File name!! File moved to GoodRaw Folder :: test_FD001.txt
-2022-05-18/20:58:15		Valid File name!! File moved to GoodRaw Folder :: test_FD004.txt
-2022-05-18/20:58:15		Name validation finished.
+2022-05-21/18:49:03		Starting validation of file name.
+2022-05-21/18:49:03		Deleting existing good and bad raw data directories.
+2022-05-21/18:49:03		Creating new good and bad raw data directories.
+2022-05-21/18:49:03		Created new good and bad raw data directories.
+2022-05-21/18:49:03		Matching file  names with regex.
+2022-05-21/18:49:03		Invalid File Name!! File moved to Bad Raw Folder :: .DS_Store
+2022-05-21/18:49:03		Valid File name!! File moved to GoodRaw Folder :: test_FD003.txt
+2022-05-21/18:49:04		Valid File name!! File moved to GoodRaw Folder :: test_FD002.txt
+2022-05-21/18:49:04		Valid File name!! File moved to GoodRaw Folder :: test_FD001.txt
+2022-05-21/18:49:04		Valid File name!! File moved to GoodRaw Folder :: test_FD004.txt
+2022-05-21/18:49:04		Name validation finished.
+2022-05-21/20:19:30		Starting validation of file name.
+2022-05-21/20:19:30		Deleting existing good and bad raw data directories.
+2022-05-21/20:19:30		Creating new good and bad raw data directories.
+2022-05-21/20:19:30		Created new good and bad raw data directories.
+2022-05-21/20:19:30		Matching file  names with regex.
+2022-05-21/20:19:30		Invalid File Name!! File moved to Bad Raw Folder :: .DS_Store
+2022-05-21/20:19:30		Valid File name!! File moved to GoodRaw Folder :: test_FD003.txt
+2022-05-21/20:19:30		Valid File name!! File moved to GoodRaw Folder :: test_FD002.txt
+2022-05-21/20:19:30		Valid File name!! File moved to GoodRaw Folder :: test_FD001.txt
+2022-05-21/20:19:30		Valid File name!! File moved to GoodRaw Folder :: test_FD004.txt
+2022-05-21/20:19:30		Name validation finished.
+2022-05-21/20:28:11		Starting validation of file name.
+2022-05-21/20:28:11		Deleting existing good and bad raw data directories.
+2022-05-21/20:28:11		Creating new good and bad raw data directories.
+2022-05-21/20:28:11		Created new good and bad raw data directories.
+2022-05-21/20:28:11		Matching file  names with regex.
+2022-05-21/20:28:11		Invalid File Name!! File moved to Bad Raw Folder :: .DS_Store
+2022-05-21/20:28:11		Valid File name!! File moved to GoodRaw Folder :: test_FD003.txt
+2022-05-21/20:28:11		Valid File name!! File moved to GoodRaw Folder :: test_FD002.txt
+2022-05-21/20:28:11		Valid File name!! File moved to GoodRaw Folder :: test_FD001.txt
+2022-05-21/20:28:11		Valid File name!! File moved to GoodRaw Folder :: test_FD004.txt
+2022-05-21/20:28:11		Name validation finished.

@@ -1,5 +1,15 @@
-2022-05-18/20:58:16		Missing Values Validation Started!!
-2022-05-18/20:58:16		No completely null columns found in file :: test_FD003.txt
-2022-05-18/20:58:16		No completely null columns found in file :: test_FD002.txt
-2022-05-18/20:58:16		No completely null columns found in file :: test_FD001.txt
-2022-05-18/20:58:17		No completely null columns found in file :: test_FD004.txt
+2022-05-21/18:49:05		Missing Values Validation Started!!
+2022-05-21/18:49:05		No completely null columns found in file :: test_FD003.txt
+2022-05-21/18:49:05		No completely null columns found in file :: test_FD002.txt
+2022-05-21/18:49:05		No completely null columns found in file :: test_FD001.txt
+2022-05-21/18:49:06		No completely null columns found in file :: test_FD004.txt
+2022-05-21/20:19:31		Missing Values Validation Started!!
+2022-05-21/20:19:31		No completely null columns found in file :: test_FD003.txt
+2022-05-21/20:19:31		No completely null columns found in file :: test_FD002.txt
+2022-05-21/20:19:31		No completely null columns found in file :: test_FD001.txt
+2022-05-21/20:19:32		No completely null columns found in file :: test_FD004.txt
+2022-05-21/20:28:13		Missing Values Validation Started!!
+2022-05-21/20:28:13		No completely null columns found in file :: test_FD003.txt
+2022-05-21/20:28:13		No completely null columns found in file :: test_FD002.txt
+2022-05-21/20:28:13		No completely null columns found in file :: test_FD001.txt
+2022-05-21/20:28:14		No completely null columns found in file :: test_FD004.txt

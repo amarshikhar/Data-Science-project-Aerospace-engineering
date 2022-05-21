@@ -183,9 +183,10 @@
 					//change url below
 					url : "/predict",
 					type: "POST",
-					data: {filepath:path},
+					data: JSON.stringify({filepath:path}),
+					contentType: 'application/json',
 					success: function(response){
-						$(".json-result").html('<p>"Prediction File created at !!!Prediction_Output_File/Predictions.csvand few of the predictions are"</p><pre>' + response + '</pre>');	
+						$(".json-result").html('<p>"Prediction File created at !!!Prediction_Output_File/Predictions.csv and few of the predictions are"</p><pre>' + response + '</pre>');
 						$('#loading').hide();
 					}
 				});
@@ -198,7 +199,8 @@
 					//change url below
 					url : "/predict",
 					type: "POST",
-					data: {filepath:path},
+					data: JSON.stringify({filepath:path}),
+					contentType: 'application/json',
 					success: function(response){
 						$(".json-result").html('<p>"Prediction File created !!!</p><pre>' + response + '</pre>');
 						$('#loading').hide();

@@ -1,30 +1,90 @@
-2022-05-18/20:58:17		Starting data insertion into database
-2022-05-18/20:58:17		Connecting to database and waiting for  table creation.
-2022-05-18/20:58:23		Verifying existence of meta data table.
-2022-05-18/20:58:23		Required metadata table exists.
-2022-05-18/20:58:23		Uploading files.
-2022-05-18/20:58:23		Trying to upload file test_FD003.txt.
-2022-05-18/20:58:23		Uploading test_FD003.txt to goodrawdata_003 table.
-2022-05-18/20:58:23		Checking table name goodrawdata_003 in database.
-2022-05-18/20:58:37		Finished uploading test_FD003.txt 16596 queries with a concurrency level of 5000 in 13 seconds.
-2022-05-18/20:58:37		Uploading meta data for table goodrawdata_003.
-2022-05-18/20:58:37		Uploaded table metadata.
-2022-05-18/20:58:37		Trying to upload file test_FD002.txt.
-2022-05-18/20:58:37		Uploading test_FD002.txt to goodrawdata_002 table.
-2022-05-18/20:58:37		Checking table name goodrawdata_002 in database.
-2022-05-18/20:58:59		Finished uploading test_FD002.txt 33991 queries with a concurrency level of 5000 in 21 seconds.
-2022-05-18/20:58:59		Uploading meta data for table goodrawdata_002.
-2022-05-18/20:58:59		Uploaded table metadata.
-2022-05-18/20:58:59		Trying to upload file test_FD001.txt.
-2022-05-18/20:58:59		Uploading test_FD001.txt to goodrawdata_001 table.
-2022-05-18/20:58:59		Checking table name goodrawdata_001 in database.
-2022-05-18/20:59:08		Finished uploading test_FD001.txt 13096 queries with a concurrency level of 5000 in 8 seconds.
-2022-05-18/20:59:08		Uploading meta data for table goodrawdata_001.
-2022-05-18/20:59:08		Uploaded table metadata.
-2022-05-18/20:59:08		Trying to upload file test_FD004.txt.
-2022-05-18/20:59:08		Uploading test_FD004.txt to goodrawdata_004 table.
-2022-05-18/20:59:08		Checking table name goodrawdata_004 in database.
-2022-05-18/20:59:34		Finished uploading test_FD004.txt 41214 queries with a concurrency level of 5000 in 25 seconds.
-2022-05-18/20:59:34		Uploading meta data for table goodrawdata_004.
-2022-05-18/20:59:34		Uploaded table metadata.
-2022-05-18/20:59:34		All files are inserted successfully.
+2022-05-21/18:49:06		Starting data insertion into database
+2022-05-21/18:49:06		Connecting to database and waiting for  table creation.
+2022-05-21/18:49:28		Verifying existence of meta data table.
+2022-05-21/18:49:28		Required metadata table exists.
+2022-05-21/18:49:28		Uploading files.
+2022-05-21/18:49:28		Trying to upload file test_FD003.txt.
+2022-05-21/18:49:28		Uploading test_FD003.txt to goodrawdata_003 table.
+2022-05-21/18:49:28		Checking table name goodrawdata_003 in database.
+2022-05-21/18:49:43		Finished uploading test_FD003.txt 16596 queries with a concurrency level of 5000 in 15 seconds.
+2022-05-21/18:49:43		Uploading meta data for table goodrawdata_003.
+2022-05-21/18:49:43		Uploaded table metadata.
+2022-05-21/18:49:43		Trying to upload file test_FD002.txt.
+2022-05-21/18:49:43		Uploading test_FD002.txt to goodrawdata_002 table.
+2022-05-21/18:49:43		Checking table name goodrawdata_002 in database.
+2022-05-21/18:50:31		Finished uploading test_FD002.txt 33991 queries with a concurrency level of 5000 in 47 seconds.
+2022-05-21/18:50:31		Uploading meta data for table goodrawdata_002.
+2022-05-21/18:50:31		Uploaded table metadata.
+2022-05-21/18:50:31		Trying to upload file test_FD001.txt.
+2022-05-21/18:50:31		Uploading test_FD001.txt to goodrawdata_001 table.
+2022-05-21/18:50:31		Checking table name goodrawdata_001 in database.
+2022-05-21/18:50:43		Finished uploading test_FD001.txt 13096 queries with a concurrency level of 5000 in 11 seconds.
+2022-05-21/18:50:43		Uploading meta data for table goodrawdata_001.
+2022-05-21/18:50:43		Uploaded table metadata.
+2022-05-21/18:50:43		Trying to upload file test_FD004.txt.
+2022-05-21/18:50:43		Uploading test_FD004.txt to goodrawdata_004 table.
+2022-05-21/18:50:43		Checking table name goodrawdata_004 in database.
+2022-05-21/18:51:19		Finished uploading test_FD004.txt 41214 queries with a concurrency level of 5000 in 34 seconds.
+2022-05-21/18:51:19		Uploading meta data for table goodrawdata_004.
+2022-05-21/18:51:19		Uploaded table metadata.
+2022-05-21/18:51:19		All files are inserted successfully.
+2022-05-21/20:19:32		Starting data insertion into database
+2022-05-21/20:19:32		Connecting to database and waiting for  table creation.
+2022-05-21/20:19:56		Verifying existence of meta data table.
+2022-05-21/20:19:56		Required metadata table exists.
+2022-05-21/20:19:56		Uploading files.
+2022-05-21/20:19:56		Trying to upload file test_FD003.txt.
+2022-05-21/20:19:56		Uploading test_FD003.txt to goodrawdata_003 table.
+2022-05-21/20:19:56		Checking table name goodrawdata_003 in database.
+2022-05-21/20:20:11		Finished uploading test_FD003.txt 16596 queries with a concurrency level of 5000 in 14 seconds.
+2022-05-21/20:20:11		Uploading meta data for table goodrawdata_003.
+2022-05-21/20:20:11		Uploaded table metadata.
+2022-05-21/20:20:11		Trying to upload file test_FD002.txt.
+2022-05-21/20:20:11		Uploading test_FD002.txt to goodrawdata_002 table.
+2022-05-21/20:20:11		Checking table name goodrawdata_002 in database.
+2022-05-21/20:20:39		Finished uploading test_FD002.txt 33991 queries with a concurrency level of 5000 in 27 seconds.
+2022-05-21/20:20:39		Uploading meta data for table goodrawdata_002.
+2022-05-21/20:20:39		Uploaded table metadata.
+2022-05-21/20:20:39		Trying to upload file test_FD001.txt.
+2022-05-21/20:20:39		Uploading test_FD001.txt to goodrawdata_001 table.
+2022-05-21/20:20:39		Checking table name goodrawdata_001 in database.
+2022-05-21/20:20:50		Finished uploading test_FD001.txt 13096 queries with a concurrency level of 5000 in 10 seconds.
+2022-05-21/20:20:50		Uploading meta data for table goodrawdata_001.
+2022-05-21/20:20:50		Uploaded table metadata.
+2022-05-21/20:20:50		Trying to upload file test_FD004.txt.
+2022-05-21/20:20:50		Uploading test_FD004.txt to goodrawdata_004 table.
+2022-05-21/20:20:50		Checking table name goodrawdata_004 in database.
+2022-05-21/20:21:22		Finished uploading test_FD004.txt 41214 queries with a concurrency level of 5000 in 31 seconds.
+2022-05-21/20:21:22		Uploading meta data for table goodrawdata_004.
+2022-05-21/20:21:22		Uploaded table metadata.
+2022-05-21/20:21:22		All files are inserted successfully.
+2022-05-21/20:28:14		Starting data insertion into database
+2022-05-21/20:28:14		Connecting to database and waiting for  table creation.
+2022-05-21/20:28:33		Verifying existence of meta data table.
+2022-05-21/20:28:33		Required metadata table exists.
+2022-05-21/20:28:33		Uploading files.
+2022-05-21/20:28:33		Trying to upload file test_FD003.txt.
+2022-05-21/20:28:33		Uploading test_FD003.txt to goodrawdata_003 table.
+2022-05-21/20:28:33		Checking table name goodrawdata_003 in database.
+2022-05-21/20:28:49		Finished uploading test_FD003.txt 16596 queries with a concurrency level of 5000 in 14 seconds.
+2022-05-21/20:28:49		Uploading meta data for table goodrawdata_003.
+2022-05-21/20:28:49		Uploaded table metadata.
+2022-05-21/20:28:49		Trying to upload file test_FD002.txt.
+2022-05-21/20:28:49		Uploading test_FD002.txt to goodrawdata_002 table.
+2022-05-21/20:28:49		Checking table name goodrawdata_002 in database.
+2022-05-21/20:29:18		Finished uploading test_FD002.txt 33991 queries with a concurrency level of 5000 in 29 seconds.
+2022-05-21/20:29:18		Uploading meta data for table goodrawdata_002.
+2022-05-21/20:29:18		Uploaded table metadata.
+2022-05-21/20:29:18		Trying to upload file test_FD001.txt.
+2022-05-21/20:29:18		Uploading test_FD001.txt to goodrawdata_001 table.
+2022-05-21/20:29:18		Checking table name goodrawdata_001 in database.
+2022-05-21/20:29:32		Finished uploading test_FD001.txt 13096 queries with a concurrency level of 5000 in 12 seconds.
+2022-05-21/20:29:32		Uploading meta data for table goodrawdata_001.
+2022-05-21/20:29:32		Uploaded table metadata.
+2022-05-21/20:29:32		Trying to upload file test_FD004.txt.
+2022-05-21/20:29:32		Uploading test_FD004.txt to goodrawdata_004 table.
+2022-05-21/20:29:32		Checking table name goodrawdata_004 in database.
+2022-05-21/20:30:11		Finished uploading test_FD004.txt 41214 queries with a concurrency level of 5000 in 39 seconds.
+2022-05-21/20:30:11		Uploading meta data for table goodrawdata_004.
+2022-05-21/20:30:11		Uploaded table metadata.
+2022-05-21/20:30:11		All files are inserted successfully.

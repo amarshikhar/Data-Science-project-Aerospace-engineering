@@ -1,14 +1,36 @@
-2022-05-18/20:58:15		Removing existing bad raw data directory.
-2022-05-18/20:58:15		BadRaw directory deleted before starting validation!!!
-2022-05-18/20:58:15		Removing existing Good data folder
-2022-05-18/20:58:15		GoodRaw directory deleted successfully!!!
-2022-05-18/20:58:15		Making good and bad raw data directories.
-2022-05-18/20:58:15		Good and Bad raw data directories created successfully.
-2022-05-18/21:00:24		Removing existing Good data folder
-2022-05-18/21:00:24		GoodRaw directory deleted successfully!!!
-2022-05-18/21:00:24		Copying bad raw data files to archive directory
-2022-05-18/21:00:24		Archive folder created : PredictionArchiveBadData/BadData_2022-05-18_210024
-2022-05-18/21:00:24		Bad files moved to archive
-2022-05-18/21:00:24		Bad files archived. Now removing bad data directory.
-2022-05-18/21:00:24		Bad Raw Data Folder Deleted successfully!!
-2022-05-18/21:00:24		Removing existing bad raw data directory.
+2022-05-21/18:49:03		Removing existing bad raw data directory.
+2022-05-21/18:49:03		Removing existing Good data folder
+2022-05-21/18:49:03		Making good and bad raw data directories.
+2022-05-21/18:49:03		Good and Bad raw data directories created successfully.
+2022-05-21/18:52:15		Removing existing Good data folder
+2022-05-21/18:52:15		GoodRaw directory deleted successfully!!!
+2022-05-21/18:52:15		Copying bad raw data files to archive directory
+2022-05-21/18:52:15		Archive folder created : PredictionArchiveBadData/BadData_2022-05-21_185215
+2022-05-21/18:52:15		Bad files moved to archive
+2022-05-21/18:52:15		Bad files archived. Now removing bad data directory.
+2022-05-21/18:52:15		Bad Raw Data Folder Deleted successfully!!
+2022-05-21/18:52:15		Removing existing bad raw data directory.
+2022-05-21/20:19:30		Removing existing bad raw data directory.
+2022-05-21/20:19:30		Removing existing Good data folder
+2022-05-21/20:19:30		Making good and bad raw data directories.
+2022-05-21/20:19:30		Good and Bad raw data directories created successfully.
+2022-05-21/20:22:40		Removing existing Good data folder
+2022-05-21/20:22:40		GoodRaw directory deleted successfully!!!
+2022-05-21/20:22:40		Copying bad raw data files to archive directory
+2022-05-21/20:22:40		Archive folder created : PredictionArchiveBadData/BadData_2022-05-21_202240
+2022-05-21/20:22:40		Bad files moved to archive
+2022-05-21/20:22:40		Bad files archived. Now removing bad data directory.
+2022-05-21/20:22:40		Bad Raw Data Folder Deleted successfully!!
+2022-05-21/20:22:40		Removing existing bad raw data directory.
+2022-05-21/20:28:11		Removing existing bad raw data directory.
+2022-05-21/20:28:11		Removing existing Good data folder
+2022-05-21/20:28:11		Making good and bad raw data directories.
+2022-05-21/20:28:11		Good and Bad raw data directories created successfully.
+2022-05-21/20:31:21		Removing existing Good data folder
+2022-05-21/20:31:21		GoodRaw directory deleted successfully!!!
+2022-05-21/20:31:21		Copying bad raw data files to archive directory
+2022-05-21/20:31:21		Archive folder created : PredictionArchiveBadData/BadData_2022-05-21_203121
+2022-05-21/20:31:21		Bad files moved to archive
+2022-05-21/20:31:21		Bad files archived. Now removing bad data directory.
+2022-05-21/20:31:21		Bad Raw Data Folder Deleted successfully!!
+2022-05-21/20:31:21		Removing existing bad raw data directory.

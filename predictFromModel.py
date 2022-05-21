@@ -96,12 +96,16 @@ class prediction:
                         df = pd.concat([df, cluster_data])
                         self.log_writer.log(self.file_object, f"Computed RUL value for cluster {c}")
 
+
+
                     else:
                         data = data.join(df['RUL'])
                         file_loader.save_prediction(data['RUL'], filename)
                         self.log_writer.log(self.file_object, f" Saved predictions for file {filename}")
                 else:
                     self.log_writer.log(self.file_object, "Predictions saved for all files.")
+
+                    return "Prediction_output"
 
             except Exception as e:
                 self.log_writer.log(self.file_object, f'Error: {e}')
