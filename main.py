@@ -20,8 +20,11 @@ CORS(app)
 @app.route("/", methods=['GET'])
 @cross_origin()
 def home():
-    print(os.listdir())
-    return render_template('index.html')
+    try:
+    # print(os.listdir())
+        return render_template('index.html')
+    except Exception as e:
+        return Response(f"{e}")
 
 @app.route("/predict", methods=['POST'])
 @cross_origin()
