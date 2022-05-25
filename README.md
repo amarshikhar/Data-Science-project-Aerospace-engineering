@@ -20,6 +20,29 @@ The data sets include three operational settings and data from 21 sensors, all c
 7. Sensor 2 ...
 26. Sensor 21
 
+### Results
+
+Use the trained model to find RUL of four test files, the result is statisfactory.
+
+![rul1.png](rul1.png)
+
+![rul2.png](rul2.png)
+
+![rul3.png](rul3.png)
+
+![rul4.png](rul4.png)
+
+### Run
+
+Put correct prediction files for prediction at Prediction_Batch_files
+
+Run main.py. 
+5001 is default local server. 
+
+On local UI/Browser Input filepath->Prediction_Batch_files
+On Postman use->{"filepath":"Prediction_Batch_files"}
+Files would be saved in Prediction_output file
+
 ### Data Validation
 
 Along with the data sets a schema file is also required, which is used for data validation. Schema is a .json file that contains all the necessary metadata about the training data sets - file names, column names, number of columns, datatype of columns. This file is checked against the training data for its validation. The process follows the following steps :
