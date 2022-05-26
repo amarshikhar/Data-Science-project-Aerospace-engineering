@@ -27,6 +27,10 @@ The data sets include three operational settings and data from 21 sensors, all c
 
 Use the trained model to find RUL of four test files, the result is statisfactory.
 
+>In the image x-axis corresponds to individual turbojet engines and y-axis corresponds to its remaining useful life(RUL).
+
+>Real remaining useful life(RUL) in orange which we got from kaggle is compared to predicted remaining useful life(RUL) in blue. 
+
 ![rul1.png](rul1.png)
 
 ![rul2.png](rul2.png)
@@ -34,6 +38,10 @@ Use the trained model to find RUL of four test files, the result is statisfactor
 ![rul3.png](rul3.png)
 
 ![rul4.png](rul4.png)
+
+Suggestion for further improvements:
+
+>Neural networks, more complex models can be utilised. It will take up significant resource for implemention.
 
 ### Run
 
