@@ -45,6 +45,8 @@ Suggestion for further improvements:
 
 ### Run
 
+Python 3.9 was used.
+
 Put correct prediction files for prediction at Prediction_Batch_files
 
 Run main.py. 
@@ -55,6 +57,10 @@ Run main.py.
 >On Postman use: {"filepath":"Prediction_Batch_files"}
 
 Files would be saved in Prediction_output file
+
+### Architechture
+
+![flowchart.jpg](flowchart.jpg)
 
 ### Data Validation
 
