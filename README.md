@@ -5,8 +5,8 @@ The solution proposed here is a RUL detection system, which selects a suitable m
 ## Overview
 ### Data
 
-The original dataset is from [isbi challenge]
-([http://brainiac2.mit.edu/isbi_challenge/](https://www.kaggle.com/code/sanchitapaul/nasa-turbofan-degradation-model/data)), 
+The original dataset is from 
+([Kaggle-nasa turbofan degradation model](https://www.kaggle.com/code/sanchitapaul/nasa-turbofan-degradation-model/data)), 
 and I've downloaded it.
 You can find it in folder /CMaps.
 
