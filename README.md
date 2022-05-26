@@ -42,8 +42,10 @@ Put correct prediction files for prediction at Prediction_Batch_files
 Run main.py. 
 5001 is default local server. 
 
-On local UI/Browser Input filepath->Prediction_Batch_files
-On Postman use->{"filepath":"Prediction_Batch_files"}
+>On local UI/Browser Input filepath: Prediction_Batch_files
+
+>On Postman use: {"filepath":"Prediction_Batch_files"}
+
 Files would be saved in Prediction_output file
 
 ### Data Validation
@@ -68,11 +70,11 @@ This is achieved following the steps listed below :
 
 >Create data table In the database, multiple tables are created, the schema of the tables i.e., field names, data types are inferred from the schema file. If old tables are already present containing previously imported training data, they are not replaced or modified, instead new table are created. So that the models can learn from old as well as new data.
 
->Data insertion The validated training data files are present in Good data folder, the data from these files is uploaded to the appropriate tables. Since different data sets correspond to different type of training data, multi- ple columns are mandatory and the data sets should not be combined together. If importing a file leads to an error because of the file type (column mismatch, datatype mismatch etc.) the same file is moved to Bad data folder.
+>Data insertion: The validated training data files are present in Good data folder, the data from these files is uploaded to the appropriate tables. Since different data sets correspond to different type of training data, multi- ple columns are mandatory and the data sets should not be combined together. If importing a file leads to an error because of the file type (column mismatch, datatype mismatch etc.) the same file is moved to Bad data folder.
 
 ### Export from Cassandra db to CSV
 
-Exporting data fromDB The training data sets are present as tables in the database. These tables are exported to a .csv (comma separated values) file, that is used for training.
+Exporting data fromDB: The training data sets are present as tables in the database. These tables are exported to a .csv (comma separated values) file, that is used for training.
 
 
 ### Data pre processing
@@ -108,9 +110,9 @@ Along with the test data, a schema file is required. Schema lists the rele- vant
 
 >Column name Similarly, the name of the columns in the data sets should match with the specification present in the schema files. Accordingly the file is put into Good data folder or Bad data folder.
 
->Number of columns The schema specifies the permissible number of columns present in the data set, the files that validate against schema are moved to Good data folder and otherwise to Bad data folder.
+>Number of columns: The schema specifies the permissible number of columns present in the data set, the files that validate against schema are moved to Good data folder and otherwise to Bad data folder.
 
->Column datatype The datatype of each column should be the same as that specified in the schema file, following which the data is put in Good data folder and failing which it is put in Bad data folder.
+>Column datatype: The datatype of each column should be the same as that specified in the schema file, following which the data is put in Good data folder and failing which it is put in Bad data folder.
 
 ### Test data Insertion into Cassandra db
 
@@ -120,7 +122,7 @@ Connect to DB system Establish connect to the database system which might be a s
 
 >Create data table In the database, multiple tables are created, the schema of the tables i.e., field names, data types are inferred from the schema file. If old tables are already present containing previously imported training data, they are not replaced or modified, instead new table are created. So that the models can learn from old as well as new data.
 
->Data insertion The validated training data files are present in Good data folder, the data from these files is uploaded to the appropriate tables. Since different data sets correspond to different type of training data, multiple columns are mandatory and the data sets should not be combined together. If importing a file leads to an error because of the file type (column mismatch, datatype mismatch etc.) the same file is moved to Bad data folder.
+>Data insertion: The validated training data files are present in Good data folder, the data from these files is uploaded to the appropriate tables. Since different data sets correspond to different type of training data, multiple columns are mandatory and the data sets should not be combined together. If importing a file leads to an error because of the file type (column mismatch, datatype mismatch etc.) the same file is moved to Bad data folder.
 
 ### Import from Cassandra db to CSV
 
@@ -136,11 +138,11 @@ Data pre-processing In this step, the csv files are loaded into pandas DataFrame
 
 ### Data Clustering
 
-Data Clustering The K-means model trained during the clustering of training data is loaded. This model is used to predict clusters of the pre-processed test data sets.
+Data Clustering: The K-means model trained during the clustering of training data is loaded. This model is used to predict clusters of the pre-processed test data sets.
 
 ### Call saved model for each cluster
 
-RUL prediction After data is clustered, each cluster is loaded and based on its cluster number, a corresponding ML model is loaded, this model was saved during the training phase. The model is used to predict remaining useful life RUL for all data points in the cluster.
+RUL prediction: After data is clustered, each cluster is loaded and based on its cluster number, a corresponding ML model is loaded, this model was saved during the training phase. The model is used to predict remaining useful life RUL for all data points in the cluster.
 
 ### Export prediction file for each CSV
 
