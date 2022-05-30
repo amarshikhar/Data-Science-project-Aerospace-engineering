@@ -5,10 +5,12 @@ The solution proposed here is a RUL detection system, which selects a suitable m
 The predictor page is deployed in cloud at ([Herokuu-steamlit](https://rul-predictor.herokuapp.com/))
 
 >Predict from stock files
+
 >Check download prediction files
+
 >Prediction files will be downloaded to your system
 
-If you don't recieve the files, cassandra db might be in hibernation.
+>If you don't recieve the files, cassandra db might be in hibernation.
 
 ## Overview
 ### Data
