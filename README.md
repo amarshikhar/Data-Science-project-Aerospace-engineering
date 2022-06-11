@@ -1,6 +1,6 @@
 # Data-Science-project-Aerospace-engineering
 
-The solution proposed here is a RUL detection system, which selects a suitable machine-learning algorithm based on the characteristics of input data set to model degradation of the engine. The predicted RUL can then be used to estimate the heath of the engine and to decide if maintenance or replacement is needed.
+The solution proposed here is a Remaining Useful Life(RUL) detection system, which selects a suitable machine-learning algorithm based on the characteristics of input data set to model degradation of the Turbo jet engine. The predicted RUL can then be used to estimate the heath of the engine and to decide if maintenance or replacement is needed.
 
 The predictor page is deployed in cloud at ([Heroku-steamlit](https://rul-predictor.herokuapp.com/))
 
